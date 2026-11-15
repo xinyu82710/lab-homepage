@@ -1,6 +1,6 @@
 {
   "pi": {
-    "photo": "image/teacher.jpg",
+    "photo": "images/teacher.jpg",
     "zh": {
       "name": "曾也鲁",
       "nameEn": "Yelu Zeng, Ph.D.",
@@ -125,16 +125,6 @@
       "Distinguished Professor Program, CAU (2021)",
       "3rd Li Xiawen Remote Sensing Young Scientist Award (2021)",
       "Outstanding Reviewer, Remote Sensing of Environment (2020)"
-    ]
-  },
-  "news": {
-    "zh": [
-      {"date": "2025-09", "text": "欢迎 2025 级新同学加入课题组。"},
-      {"date": "2024-12", "text": "课题组在 Remote Sensing of Environment 发表新论文。"}
-    ],
-    "en": [
-      {"date": "2025-09", "text": "Warm welcome to new students joining in Fall 2025."},
-      {"date": "2024-12", "text": "New paper published in Remote Sensing of Environment."}
     ]
   },
   "join": {
