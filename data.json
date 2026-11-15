@@ -172,10 +172,10 @@ document.getElementById("btnEn").onclick = ()=>{
 function render(){
     const pi = data.pi[currentLang];
     const piEnRaw = data.pi.en;
-    // 渲染头部profile
+    // 渲染头部profile，路径改为 image/teacher.jpg
     const profileBox = document.getElementById("profileBox");
     profileBox.innerHTML = `
-        <img class="profile-img" src="${data.pi.photo}" alt="${pi.name}">
+        <img class="profile-img" src="image/teacher.jpg" alt="${pi.name}">
         <div class="profile-text">
             <h1 class="profile-name">${pi.name}</h1>
             <div class="profile-name-en">${piEnRaw.nameEn}</div>
