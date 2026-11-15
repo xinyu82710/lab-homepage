@@ -201,16 +201,18 @@ document.getElementById("btnEn").onclick = ()=>{
 
 function render(){
     const pi = data.pi[currentLang];
-    const piEnRaw = data.pi.en;
     const profileBox = document.getElementById("profileBox");
+    // 修复图片加载：单独拿photo路径，不会被语言切换干扰
+    const imgSrc = data.pi.photo;
 
     profileBox.innerHTML = `
         <div class="profile-img-card">
-            <img class="profile-img" src="${data.pi.photo}" alt="${pi.name}" onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\\'profile-img-placeholder\\'>PI photo</div>';"/>
+            <img class="profile-img" src="${imgSrc}" alt="${pi.name}"
+            onerror="console.log('图片加载失败，路径：',this.src);this.style.display='none';this.parentNode.innerHTML='<div class=\\'profile-img-placeholder\\'>PI photo</div>';">
         </div>
         <div class="profile-text">
             <h1 class="profile-name">${pi.name}</h1>
-            <div class="profile-name-en">${piEnRaw.nameEn}</div>
+            <div class="profile-name-en">${pi.nameEn}</div>
             <div class="profile-title">${pi.title}</div>
             <div class="profile-desc">${pi.tagline}</div>
             <div class="profile-info-grid">
