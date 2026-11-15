@@ -32,60 +32,78 @@ body{
     background:#1a365d;
     color:#fff;
 }
+
 /* 头部简介 */
 .profile-wrap {
-  display: flex;
-  gap: 32px;
-  padding: 24px 0;
-  border-bottom: 1px solid #e5e7eb;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 32px;
+    padding: 24px 0;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.profile-img-card {
+    width: 240px;
+    height: 320px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    background: #f7f8fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 .profile-img {
-  width: 240px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 4px;
-  flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.profile-img-placeholder {
+    color:#999;
+    font-size:15px;
 }
 .profile-text {
-  flex: 1;
-  min-width: 300px;
+    flex: 1;
+    min-width: 300px;
 }
 .profile-name {
-  font-size: 42px;
-  font-weight: 700;
-  color: #1a365d;
-  margin: 0 0 6px 0;
+    font-size: 42px;
+    font-weight: 700;
+    color: #1a365d;
+    margin: 0 0 6px 0;
 }
 .profile-name-en {
-  font-size: 24px;
-  color: #6b7280;
-  margin: 0 0 12px 0;
+    font-size: 24px;
+    color: #6b7280;
+    margin: 0 0 12px 0;
 }
 .profile-title {
-  font-size: 20px;
-  color: #333;
-  margin: 0 0 20px 0;
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 20px 0;
 }
 .profile-desc {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #222;
-  margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #222;
+    margin-bottom: 24px;
 }
 .profile-info-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 20px;
-  font-size: 17px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+    font-size: 17px;
 }
 .profile-info-grid span.label {
-  color: #555;
-  font-weight: 500;
-  display: inline-block;
-  min-width: 70px;
+    color: #555;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 70px;
 }
+
 /* 通用板块 */
 .section{
     margin-bottom:36px;
@@ -121,21 +139,24 @@ li{margin-bottom:10px;font-size:16px;}
     padding:12px;border:1px solid #eee;border-radius:6px;
 }
 .member-card h4{color:#1a365d;margin-bottom:4px;}
+
 @media (max-width:768px) {
-  .profile-wrap {
-    flex-direction: column;
-  }
-  .profile-img {
-    width: 100%;
-    max-width: 280px;
-  }
-  .profile-info-grid {
-    grid-template-columns: 1fr;
-  }
+    .profile-wrap {
+        flex-direction: column;
+    }
+    .profile-img-card {
+        width: 100%;
+        max-width: 280px;
+        height: 360px;
+    }
+    .profile-info-grid {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
 <body>
+
 <div class="lang-switch">
     <button id="btnZh" class="active">中文</button>
     <button id="btnEn">English</button>
@@ -147,11 +168,11 @@ li{margin-bottom:10px;font-size:16px;}
 <script>
 let data = null;
 let currentLang = "zh";
-// 加载json
+
 fetch("data.json")
 .then(res=>{
     if(!res.ok){
-        throw new Error(`文件请求失败：状态码 ${res.status}`);
+        throw new Error("data.json 加载失败，状态码：" + res.status);
     }
     return res.json();
 })
@@ -160,18 +181,19 @@ fetch("data.json")
     render();
 })
 .catch(err=>{
-    alert("数据加载失败："+err.message);
-    console.error("详细错误：",err);
-})
+    alert("数据加载失败：" + err.message);
+    console.error(err);
+});
 
 document.getElementById("btnZh").onclick = ()=>{
-    currentLang="zh";
+    currentLang = "zh";
     document.getElementById("btnZh").classList.add("active");
     document.getElementById("btnEn").classList.remove("active");
     render();
 }
+
 document.getElementById("btnEn").onclick = ()=>{
-    currentLang="en";
+    currentLang = "en";
     document.getElementById("btnEn").classList.add("active");
     document.getElementById("btnZh").classList.remove("active");
     render();
@@ -180,10 +202,12 @@ document.getElementById("btnEn").onclick = ()=>{
 function render(){
     const pi = data.pi[currentLang];
     const piEnRaw = data.pi.en;
-    // 渲染头部profile
     const profileBox = document.getElementById("profileBox");
+
     profileBox.innerHTML = `
-        <img class="profile-img" src="image/teacher.jpg" alt="${pi.name}">
+        <div class="profile-img-card">
+            <img class="profile-img" src="${data.pi.photo}" alt="${pi.name}" onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\\'profile-img-placeholder\\'>PI photo</div>';"/>
+        </div>
         <div class="profile-text">
             <h1 class="profile-name">${pi.name}</h1>
             <div class="profile-name-en">${piEnRaw.nameEn}</div>
@@ -196,8 +220,8 @@ function render(){
                 <div><span class="label">${currentLang==='zh'?'邮编':'Zip'}</span> 100193</div>
             </div>
         </div>
-    `
-    // 主体内容
+    `;
+
     const c = document.getElementById("container");
     const lang = currentLang;
     const txt = {
@@ -209,100 +233,112 @@ function render(){
         project: lang==="zh"?"科研项目":"Research Projects",
         ip: lang==="zh"?"专利与著作":"Patents & Books",
         award: lang==="zh"?"获奖荣誉":"Awards",
-        news: lang==="zh"?"课题组新闻":"Group News",
         join: lang==="zh"?"招生加入":"Join Us",
         member: lang==="zh"?"团队成员":"Group Members",
         postdoc: lang==="zh"?"博士后":"Postdocs",
         phd: lang==="zh"?"博士研究生":"PhD Students",
         master: lang==="zh"?"硕士研究生":"Master Students",
         alumni: lang==="zh"?"毕业生":"Alumni"
-    }
+    };
+
     let html = "";
-    // 教育经历
-    html += `<div class="section"><h2>${txt.edu}</h2><ul>`
+
+    html += `<div class="section"><h2>${txt.edu}</h2><ul>`;
     pi.edu.forEach(item=>{
-        html += `<li>${item.when} ${item.what}</li>`
-    })
-    html += `</ul></div>`
-    // 工作经历
-    html += `<div class="section"><h2>${txt.work}</h2><ul>`
+        html += `<li>${item.when} ${item.what}</li>`;
+    });
+    html += `</ul></div>`;
+
+    html += `<div class="section"><h2>${txt.work}</h2><ul>`;
     pi.work.forEach(item=>{
-        html += `<li>${item.when} ${item.what}</li>`
-    })
-    html += `</ul></div>`
-    // 学术兼职
-    html += `<div class="section"><h2>${txt.society}</h2><ul>`
+        html += `<li>${item.when} ${item.what}</li>`;
+    });
+    html += `</ul></div>`;
+
+    html += `<div class="section"><h2>${txt.society}</h2><ul>`;
     pi.society.forEach(item=>{
-        html += `<li>${item}</li>`
-    })
-    html += `</ul></div>`
-    // 研究方向
-    html += `<div class="section"><h2>${txt.research}</h2>`
+        html += `<li>${item}</li>`;
+    });
+    html += `</ul></div>`;
+
+    html += `<div class="section"><h2>${txt.research}</h2>`;
     data.research[lang].forEach(r=>{
-        html += `<div class="research-item"><strong>${r.title}</strong><br>${r.desc}</div>`
-    })
-    html += `</div>`
-    // 代表性论文
-    html += `<div class="section"><h2>${txt.pub}</h2><ul>`
+        html += `<div class="research-item"><strong>${r.title}</strong><br>${r.desc}</div>`;
+    });
+    html += `</div>`;
+
+    html += `<div class="section"><h2>${txt.pub}</h2><ul>`;
     data.publications.highlights.forEach(p=>{
-        html += `<li class="paper-item">${p}</li>`
-    })
-    html += `</ul></div>`
-    // 科研项目
-    html += `<div class="section"><h2>${txt.project}</h2><ul>`
+        html += `<li class="paper-item">${p}</li>`;
+    });
+    html += `</ul></div>`;
+
+    html += `<div class="section"><h2>${txt.project}</h2><ul>`;
     data.projects[lang].forEach(p=>{
-        html += `<li>${p}</li>`
-    })
-    html += `</ul></div>`
-    // 专利著作
-    html += `<div class="section"><h2>${txt.ip}</h2><ul>`
+        html += `<li>${p}</li>`;
+    });
+    html += `</ul></div>`;
+
+    html += `<div class="section"><h2>${txt.ip}</h2><ul>`;
     data.ip[lang].forEach(i=>{
-        html += `<li>${i}</li>`
-    })
-    html += `</ul></div>`
-    // 获奖荣誉
-    html += `<div class="section"><h2>${txt.award}</h2><ul>`
+        html += `<li>${i}</li>`;
+    });
+    html += `</ul></div>`;
+
+    html += `<div class="section"><h2>${txt.award}</h2><ul>`;
     data.awards[lang].forEach(a=>{
-        html += `<li>${a}</li>`
-    })
-    html += `</ul></div>`
-    // 课题组新闻
-    html += `<div class="section"><h2>${txt.news}</h2><ul>`
-    data.news[lang].forEach(n=>{
-        html += `<li>${n.date} — ${n.text}</li>`
-    })
-    html += `</ul></div>`
-    // 招生加入
-    html += `<div class="section"><h2>${txt.join}</h2><div style="font-size:16px">${data.join[lang]}</div></div>`
-    // 团队成员
-    html += `<div class="section"><h2>${txt.member}</h2>`
+        html += `<li>${a}</li>`;
+    });
+    html += `</ul></div>`;
+
+    html += `<div class="section"><h2>${txt.join}</h2><div style="font-size:16px">${data.join[lang]}</div></div>`;
+
+    html += `<div class="section"><h2>${txt.member}</h2>`;
     const m = data.members;
-    if(m.postdoc.length>0){
-        html += `<h3 style="margin:12px 0 8px;color:#333">${txt.postdoc}</h3><div class="member-block">`
-        m.postdoc.forEach(x=>html+=`<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`)
-        html += `</div>`
+
+    if(m.postdoc && m.postdoc.length>0){
+        html += `<h3 style="margin:12px 0 8px;color:#333">${txt.postdoc}</h3><div class="member-block">`;
+        m.postdoc.forEach(x=>{
+            html += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`;
+        });
+        html += `</div>`;
     }
-    if(m.phd.length>0){
-        html += `<h3 style="margin:12px 0 8px;color:#333">${txt.phd}</h3><div class="member-block">`
-        m.phd.forEach(x=>html+=`<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`)
-        html += `</div>`
+    if(m.phd && m.phd.length>0){
+        html += `<h3 style="margin:12px 0 8px;color:#333">${txt.phd}</h3><div class="member-block">`;
+        m.phd.forEach(x=>{
+            html += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`;
+        });
+        html += `</div>`;
     }
-    if(m.master.length>0){
-        html += `<h3 style="margin:12px 0 8px;color:#333">${txt.master}</h3><div class="member-block">`
-        m.master.forEach(x=>html+=`<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`)
-        html += `</div>`
+    if(m.master && m.master.length>0){
+        html += `<h3 style="margin:12px 0 8px;color:#333">${txt.master}</h3><div class="member-block">`;
+        m.master.forEach(x=>{
+            html += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`;
+        });
+        html += `</div>`;
     }
-    if(m.alumni.length>0){
-        html += `<h3 style="margin:12px 0 8px;color:#333">${txt.alumni}</h3><div class="member-block">`
-        m.alumni.forEach(x=>html+=`<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`)
-        html += `</div>`
+    if(m.alumni && m.alumni.length>0){
+        html += `<h3 style="margin:12px 0 8px;color:#333">${txt.alumni}</h3><div class="member-block">`;
+        m.alumni.forEach(x=>{
+            html += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`;
+        });
+        html += `</div>`;
     }
-    if(m.postdoc.length===0 && m.phd.length===0 && m.master.length===0 && m.alumni.length===0){
-        html += `<p style="color:#666">${lang==="zh"?"成员信息持续更新中":"Members coming soon..."}</p>`
+
+    if(
+        (!m.postdoc || m.postdoc.length===0) &&
+        (!m.phd || m.phd.length===0) &&
+        (!m.master || m.master.length===0) &&
+        (!m.alumni || m.alumni.length===0)
+    ){
+        html += `<p style="color:#666">${lang==="zh"?"成员信息持续更新中":"Members coming soon..."}</p>`;
     }
-    html += `</div>`
+
+    html += `</div>`;
+
     c.innerHTML = html;
 }
 </script>
+
 </body>
 </html>
