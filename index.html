@@ -7,94 +7,90 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0;font-family:"Microsoft Yahei",sans-serif;}
 body{
-    max-width:1100px;
-    margin:0 auto;
-    padding:24px 20px;
     color:#222;
     background:#fff;
     line-height:1.7;
 }
-
-/* 顶部标题栏 */
-.site-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding-bottom:16px;
-    border-bottom:2px solid #1a365d;
-    margin-bottom:0;
-    flex-wrap:wrap;
-    gap:12px;
+/* 顶部深红通栏，对标中农官网 */
+.top-bar{
+    width:100%;
+    height:36px;
+    background:#900;
 }
-.site-title{
-    font-size:26px;
-    font-weight:700;
-    color:#1a365d;
+.wrap{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    min-height: calc(100vh - 36px);
+}
+/* 左侧侧边菜单 */
+.sidebar{
+    width:240px;
+    border-right:1px solid #eee;
+    padding-top:20px;
+}
+.sidebar-item{
+    display:block;
+    width:100%;
+    text-align:left;
+    padding:12px 20px;
+    font-size:16px;
+    border:none;
+    background:none;
+    cursor:pointer;
+    transition:0.2s;
+}
+.sidebar-item.active{
+    background:#f0f0f0;
+    color:#006699;
+    font-weight:500;
+}
+.sidebar-item:hover{
+    background:#f7f7f7;
+}
+/* 右侧内容区 */
+.main{
+    flex:1;
+    padding:24px 32px;
+    position:relative;
+}
+.lang-switch{
+    position:absolute;
+    top:16px;
+    right:24px;
 }
 .lang-switch button{
-    border:1px solid #1a365d;
+    border:1px solid #900;
     background:#fff;
-    color:#1a365d;
-    padding:5px 14px;
-    border-radius:4px;
+    color:#900;
+    padding:4px 12px;
+    border-radius:3px;
     cursor:pointer;
-    font-size:14px;
     margin-left:6px;
 }
 .lang-switch button.active{
-    background:#1a365d;
+    background:#900;
     color:#fff;
 }
-
-/* 导航标签栏 */
-.tab-nav{
-    display:flex;
-    border-bottom:1px solid #e5e7eb;
-    margin-bottom:28px;
-    flex-wrap:wrap;
-}
-.tab-btn{
-    padding:12px 20px;
-    background:none;
-    border:none;
-    cursor:pointer;
-    font-size:16px;
-    color:#555;
-    border-bottom:3px solid transparent;
-    margin-bottom:-1px;
-    transition:all 0.2s;
-}
-.tab-btn:hover{
-    color:#1a365d;
-}
-.tab-btn.active{
-    color:#1a365d;
-    font-weight:600;
-    border-bottom-color:#1a365d;
-}
-
-/* 内容区 */
 .tab-content{
     display:none;
+    margin-top:40px;
 }
 .tab-content.active{
     display:block;
 }
-
-/* 首页profile */
+/* 个人资料板块 */
 .profile-wrap {
     display: flex;
     gap: 32px;
-    padding: 10px 0 24px 0;
     flex-wrap: wrap;
     align-items: flex-start;
 }
 .profile-img-card {
     width: 220px;
     height: 290px;
-    border-radius: 6px;
-    border: 1px solid #e5e7eb;
-    background: #f7f8fa;
+    border-radius: 4px;
+    border:1px solid #ddd;
     overflow: hidden;
     flex-shrink: 0;
 }
@@ -109,139 +105,110 @@ body{
     min-width: 280px;
 }
 .profile-name {
-    font-size: 38px;
+    font-size: 34px;
     font-weight: 700;
-    color: #1a365d;
-    margin: 0 0 4px 0;
-}
-.profile-name-en {
-    font-size: 20px;
-    color: #6b7280;
-    margin: 0 0 10px 0;
+    color:#222;
+    margin:0 0 6px 0;
 }
 .profile-title {
-    font-size: 18px;
-    color: #333;
-    margin: 0 0 16px 0;
-}
-.profile-desc {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 20px;
-}
-.profile-bio{
-    font-size:15px;
+    font-size:17px;
     color:#444;
-    line-height:1.8;
-    margin-bottom:20px;
+    margin-bottom:16px;
 }
-.profile-info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 20px;
-    font-size: 15px;
+.profile-info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 16px;
+    font-size:15px;
 }
-.profile-info-grid span.label {
-    color: #555;
-    font-weight: 500;
-    display: inline-block;
-    min-width: 60px;
-}
-
-/* 通用板块 */
-.section{
-    margin-bottom:28px;
-}
-.section:last-child{margin-bottom:0;}
 .section h2{
-    color:#1a365d;
     font-size:22px;
-    margin-bottom:14px;
+    color:#222;
+    margin-bottom:16px;
     padding-bottom:6px;
-    border-bottom:2px solid #1a365d;
+    border-bottom:2px solid #900;
     display:inline-block;
 }
 ul{padding-left:22px;}
 li{margin-bottom:10px;font-size:15.5px;}
-.research-item{
-    margin-bottom:16px;
-}
-.research-item strong{
-    color:#1a365d;
-    font-size:16.5px;
-}
+.research-item{margin-bottom:16px;}
+.research-item strong{color:#900;font-size:16px;}
 .paper-item{margin-bottom:12px;font-size:15px;}
 .member-block{
     display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
     gap:20px;
     margin-top:12px;
 }
 .member-card{
-    padding:14px;border:1px solid #eee;border-radius:6px;
+    padding:12px;border:1px solid #eee;border-radius:4px;
 }
-.member-card h4{color:#1a365d;margin-bottom:4px;}
-
+.member-card h4{color:#900;margin-bottom:4px;}
+.placeholder-text{
+    color:#777;
+    font-size:15px;
+}
 @media (max-width:768px) {
-    .profile-wrap {
-        flex-direction: column;
-    }
-    .profile-img-card {
-        width: 100%;
-        max-width: 260px;
-        height: 340px;
-    }
-    .profile-info-grid {
-        grid-template-columns: 1fr;
-    }
-    .tab-btn{
-        padding:10px 14px;
-        font-size:14px;
-    }
+    .wrap{flex-direction:column;}
+    .sidebar{width:100%;border-right:none;border-bottom:1px solid #eee;}
+    .profile-wrap{flex-direction:column;}
+    .profile-img-card{max-width:240px;height:300px;}
 }
 </style>
 </head>
 <body>
-
-<!-- 顶部标题 -->
-<div class="site-header">
-    <div class="site-title">ZENG Lab · 曾也鲁课题组</div>
-    <div class="lang-switch">
-        <button id="btnZh" class="active">中文</button>
-        <button id="btnEn">English</button>
+<div class="top-bar"></div>
+<div class="wrap">
+    <!-- 左侧侧边菜单，顺序和截图完全一致 -->
+    <div class="sidebar">
+        <button class="sidebar-item active" data-tab="info">个人资料</button>
+        <button class="sidebar-item" data-tab="overview">个人概况</button>
+        <button class="sidebar-item" data-tab="research">研究领域</button>
+        <button class="sidebar-item" data-tab="course">开授课程</button>
+        <button class="sidebar-item" data-tab="project">科研项目</button>
+        <button class="sidebar-item" data-tab="paper">论文</button>
+        <button class="sidebar-item" data-tab="tech">科技成果</button>
+        <button class="sidebar-item" data-tab="award">荣誉及奖励</button>
+        <button class="sidebar-item" data-tab="admission">招生信息</button>
+        <button class="sidebar-item" data-tab="team">团队展示</button>
+        <button class="sidebar-item" data-tab="news">活动动态</button>
+    </div>
+    <!-- 右侧内容区 -->
+    <div class="main">
+        <div class="lang-switch">
+            <button id="btnZh" class="active">中文</button>
+            <button id="btnEn">English</button>
+        </div>
+        <div id="tab-info" class="tab-content active"></div>
+        <div id="tab-overview" class="tab-content"></div>
+        <div id="tab-research" class="tab-content"></div>
+        <div id="tab-course" class="tab-content"></div>
+        <div id="tab-project" class="tab-content"></div>
+        <div id="tab-paper" class="tab-content"></div>
+        <div id="tab-tech" class="tab-content"></div>
+        <div id="tab-award" class="tab-content"></div>
+        <div id="tab-admission" class="tab-content"></div>
+        <div id="tab-team" class="tab-content"></div>
+        <div id="tab-news" class="tab-content"></div>
     </div>
 </div>
-
-<!-- 导航标签 -->
-<div class="tab-nav" id="tabNav">
-    <button class="tab-btn active" data-tab="home">首页</button>
-    <button class="tab-btn" data-tab="edu">教育与工作</button>
-    <button class="tab-btn" data-tab="research">研究方向</button>
-    <button class="tab-btn" data-tab="pub">论文与项目</button>
-    <button class="tab-btn" data-tab="award">获奖成果</button>
-    <button class="tab-btn" data-tab="join">招生加入</button>
-</div>
-
-<!-- 各标签内容 -->
-<div id="tab-home" class="tab-content active"></div>
-<div id="tab-edu" class="tab-content"></div>
-<div id="tab-research" class="tab-content"></div>
-<div id="tab-pub" class="tab-content"></div>
-<div id="tab-award" class="tab-content"></div>
-<div id="tab-join" class="tab-content"></div>
 
 <script>
 let data = null;
 let currentLang = "zh";
-
 fetch("data.json")
 .then(res=>{
-    if(!res.ok) throw new Error("data.json 加载失败，状态码：" + res.status);
+    if(!res.ok) throw new Error("data.json 加载失败");
     return res.json();
 })
-.then(d=>{ data = d; render(); })
-.catch(err=>{ alert("数据加载失败：" + err.message); console.error(err); });
+.then(d=>{
+    data = d;
+    render();
+})
+.catch(err=>{
+    console.error("加载错误：", err);
+    alert("data.json 加载失败：" + err.message);
+})
 
 // 语言切换
 document.getElementById("btnZh").onclick = ()=>{
@@ -257,145 +224,140 @@ document.getElementById("btnEn").onclick = ()=>{
     render();
 }
 
-// 标签切换
-document.querySelectorAll(".tab-btn").forEach(btn=>{
+// 侧边菜单点击
+document.querySelectorAll(".sidebar-item").forEach(btn=>{
     btn.onclick = ()=>{
-        document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+        document.querySelectorAll(".sidebar-item").forEach(b=>b.classList.remove("active"));
         document.querySelectorAll(".tab-content").forEach(c=>c.classList.remove("active"));
         btn.classList.add("active");
-        document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
+        const targetId = "tab-" + btn.dataset.tab;
+        document.getElementById(targetId).classList.add("active");
     }
-});
+})
 
 function render(){
     if(!data) return;
     const pi = data.pi[currentLang];
     const lang = currentLang;
-    const t = {
-        home: lang==="zh"?"首页":"Home",
-        edu: lang==="zh"?"教育与工作":"Education & Work",
-        research: lang==="zh"?"研究方向":"Research",
-        pub: lang==="zh"?"论文与项目":"Publications & Projects",
-        award: lang==="zh"?"获奖成果":"Awards & Patents",
-        join: lang==="zh"?"招生加入":"Join Us"
+    const menuText = {
+        info: lang==="zh"?"个人资料":"Profile",
+        overview: lang==="zh"?"个人概况":"Biography",
+        research: lang==="zh"?"研究领域":"Research Interests",
+        course: lang==="zh"?"开授课程":"Courses",
+        project: lang==="zh"?"科研项目":"Research Projects",
+        paper: lang==="zh"?"论文":"Publications",
+        tech: lang==="zh"?"科技成果":"Patents & Works",
+        award: lang==="zh"?"荣誉及奖励":"Awards",
+        admission: lang==="zh"?"招生信息":"Admission",
+        team: lang==="zh"?"团队展示":"Group Members",
+        news: lang==="zh"?"活动动态":"News"
     };
+    const btns = document.querySelectorAll(".sidebar-item");
+    const keys = ["info","overview","research","course","project","paper","tech","award","admission","team","news"];
+    keys.forEach((k,i)=>{
+        btns[i].textContent = menuText[k];
+    });
 
-    // 更新导航文字
-    const navBtns = document.querySelectorAll(".tab-btn");
-    navBtns[0].textContent = t.home;
-    navBtns[1].textContent = t.edu;
-    navBtns[2].textContent = t.research;
-    navBtns[3].textContent = t.pub;
-    navBtns[4].textContent = t.award;
-    navBtns[5].textContent = t.join;
-
-    // ===== 首页 =====
-    document.getElementById("tab-home").innerHTML = `
+    // 1.个人资料
+    document.getElementById("tab-info").innerHTML = `
         <div class="profile-wrap">
             <div class="profile-img-card">
                 <img class="profile-img" src="${data.pi.photo}" alt="${pi.name}"
-                onerror="this.style.display='none';this.parentNode.innerHTML='<div style=\\'color:#999;padding:20px;text-align:center\\'>PI photo</div>';">
+                onerror="this.style.display='none';this.parentNode.innerHTML='<div style=color:#999;padding:20px;text-align:center>PI photo</div>';">
             </div>
             <div class="profile-text">
                 <h1 class="profile-name">${pi.name}</h1>
-                <div class="profile-name-en">${pi.nameEn}</div>
                 <div class="profile-title">${pi.title}</div>
-                <div class="profile-desc">${pi.tagline}</div>
-                <div class="profile-bio">${pi.bio}</div>
                 <div class="profile-info-grid">
-                    <div><span class="label">Email</span> ${pi.email}</div>
-                    <div><span class="label">${lang==='zh'?'办公室':'Office'}</span> ${pi.office}</div>
-                    <div><span class="label">${lang==='zh'?'单位':'Dept'}</span> ${pi.dept}</div>
+                    <div><b>Email：</b>${pi.email}</div>
+                    <div><b>${lang==='zh'?'办公室':'Office'}：</b>${pi.office}</div>
+                    <div><b>${lang==='zh'?'单位':'Affiliation'}：</b>${pi.dept}</div>
                 </div>
             </div>
         </div>
     `;
 
-    // ===== 教育与工作 =====
-    let eduHtml = `<div class="section"><h2>${lang==="zh"?"教育经历":"Education"}</h2><ul>`;
-    pi.edu.forEach(item=>{ eduHtml += `<li>${item.when} ${item.what}</li>`; });
-    eduHtml += `</ul></div>`;
+    // 2.个人概况
+    let overviewHtml = `<div class="section"><h2>${menuText.overview}</h2><div style="font-size:15.5px;line-height:1.8;">${pi.bio}</div></div>`;
+    overviewHtml += `<div class="section"><h2>${lang==="zh"?"教育经历":"Education"}</h2><ul>`;
+    pi.edu.forEach(item=>overviewHtml += `<li>${item.when} ${item.what}</li>`);
+    overviewHtml += `</ul></div>`;
+    overviewHtml += `<div class="section"><h2>${lang==="zh"?"工作经历":"Work Experience"}</h2><ul>`;
+    pi.work.forEach(item=>overviewHtml += `<li>${item.when} ${item.what}</li>`);
+    overviewHtml += `</ul></div>`;
+    overviewHtml += `<div class="section"><h2>${lang==="zh"?"学术兼职":"Academic Services"}</h2><ul>`;
+    pi.society.forEach(item=>overviewHtml += `<li>${item}</li>`);
+    overviewHtml += `</ul></div>`;
+    document.getElementById("tab-overview").innerHTML = overviewHtml;
 
-    eduHtml += `<div class="section"><h2>${lang==="zh"?"工作经历":"Work Experience"}</h2><ul>`;
-    pi.work.forEach(item=>{ eduHtml += `<li>${item.when} ${item.what}</li>`; });
-    eduHtml += `</ul></div>`;
-
-    eduHtml += `<div class="section"><h2>${lang==="zh"?"学术兼职":"Academic Services"}</h2><ul>`;
-    pi.society.forEach(item=>{ eduHtml += `<li>${item}</li>`; });
-    eduHtml += `</ul></div>`;
-
-    document.getElementById("tab-edu").innerHTML = eduHtml;
-
-    // ===== 研究方向 =====
-    let resHtml = `<div class="section"><h2>${lang==="zh"?"研究方向":"Research Interests"}</h2>`;
-    data.research[lang].forEach(r=>{
-        resHtml += `<div class="research-item"><strong>${r.title}</strong><br>${r.desc}</div>`;
-    });
+    //3.研究领域
+    let resHtml = `<div class="section"><h2>${menuText.research}</h2>`;
+    data.research[lang].forEach(r=>resHtml += `<div class="research-item"><strong>${r.title}</strong><br>${r.desc}</div>`);
     resHtml += `</div>`;
     document.getElementById("tab-research").innerHTML = resHtml;
 
-    // ===== 论文与项目 =====
-    let pubHtml = `<div class="section"><h2>${lang==="zh"?"代表性论文":"Selected Publications"}</h2><ul>`;
-    data.publications.highlights.forEach(p=>{
-        pubHtml += `<li class="paper-item">${p}</li>`;
-    });
-    pubHtml += `</ul></div>`;
+    //4.开授课程
+    document.getElementById("tab-course").innerHTML = `<div class="section"><h2>${menuText.course}</h2><p class="placeholder-text">${lang==="zh"?"课程信息持续更新中...":"Course information coming soon..."}</p></div>`;
 
-    pubHtml += `<div class="section"><h2>${lang==="zh"?"科研项目":"Research Projects"}</h2><ul>`;
-    data.projects[lang].forEach(p=>{
-        pubHtml += `<li>${p}</li>`;
-    });
-    pubHtml += `</ul></div>`;
-    document.getElementById("tab-pub").innerHTML = pubHtml;
+    //5.科研项目
+    let proHtml = `<div class="section"><h2>${menuText.project}</h2><ul>`;
+    data.projects[lang].forEach(p=>proHtml += `<li>${p}</li>`);
+    proHtml += `</ul></div>`;
+    document.getElementById("tab-project").innerHTML = proHtml;
 
-    // ===== 获奖成果 =====
-    let awardHtml = `<div class="section"><h2>${lang==="zh"?"获奖荣誉":"Awards"}</h2><ul>`;
-    data.awards[lang].forEach(a=>{
-        awardHtml += `<li>${a}</li>`;
-    });
-    awardHtml += `</ul></div>`;
+    //6.论文
+    let paperHtml = `<div class="section"><h2>${menuText.paper}</h2><ul>`;
+    data.publications.highlights.forEach(p=>paperHtml += `<li class="paper-item">${p}</li>`);
+    paperHtml += `</ul></div>`;
+    document.getElementById("tab-paper").innerHTML = paperHtml;
 
-    awardHtml += `<div class="section"><h2>${lang==="zh"?"专利与著作":"Patents & Books"}</h2><ul>`;
-    data.ip[lang].forEach(i=>{
-        awardHtml += `<li>${i}</li>`;
-    });
+    //7.科技成果
+    let techHtml = `<div class="section"><h2>${menuText.tech}</h2><ul>`;
+    data.ip[lang].forEach(i=>techHtml += `<li>${i}</li>`);
+    techHtml += `</ul></div>`;
+    document.getElementById("tab-tech").innerHTML = techHtml;
+
+    //8.荣誉及奖励
+    let awardHtml = `<div class="section"><h2>${menuText.award}</h2><ul>`;
+    data.awards[lang].forEach(a=>awardHtml += `<li>${a}</li>`);
     awardHtml += `</ul></div>`;
     document.getElementById("tab-award").innerHTML = awardHtml;
 
-    // ===== 招生加入 =====
-    let joinHtml = `<div class="section"><h2>${lang==="zh"?"招生加入":"Join Us"}</h2><div style="font-size:15.5px">${data.join[lang]}</div></div>`;
+    //9.招生信息
+    let admHtml = `<div class="section"><h2>${menuText.admission}</h2><div style="font-size:15.5px;line-height:1.8;">${data.join[lang]}</div></div>`;
+    document.getElementById("tab-admission").innerHTML = admHtml;
 
-    joinHtml += `<div class="section"><h2>${lang==="zh"?"团队成员":"Group Members"}</h2>`;
+    //10.团队展示
+    let teamHtml = `<div class="section"><h2>${menuText.team}</h2>`;
     const m = data.members;
     const hasMember = (m.postdoc && m.postdoc.length>0) || (m.phd && m.phd.length>0) || (m.master && m.master.length>0) || (m.alumni && m.alumni.length>0);
-
     if(m.postdoc && m.postdoc.length>0){
-        joinHtml += `<h3 style="margin:12px 0 8px;color:#333">${lang==="zh"?"博士后":"Postdocs"}</h3><div class="member-block">`;
-        m.postdoc.forEach(x=>{ joinHtml += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`; });
-        joinHtml += `</div>`;
+        teamHtml += `<h3 style="margin:12px 0 8px;color:#333">${lang==="zh"?"博士后":"Postdocs"}</h3><div class="member-block">`;
+        m.postdoc.forEach(x=>teamHtml += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`);
+        teamHtml += `</div>`;
     }
     if(m.phd && m.phd.length>0){
-        joinHtml += `<h3 style="margin:12px 0 8px;color:#333">${lang==="zh"?"博士研究生":"PhD Students"}</h3><div class="member-block">`;
-        m.phd.forEach(x=>{ joinHtml += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`; });
-        joinHtml += `</div>`;
+        teamHtml += `<h3 style="margin:12px 0 8px;color:#333">${lang==="zh"?"博士研究生":"PhD Students"}</h3><div class="member-block">`;
+        m.phd.forEach(x=>teamHtml += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`);
+        teamHtml += `</div>`;
     }
     if(m.master && m.master.length>0){
-        joinHtml += `<h3 style="margin:12px 0 8px;color:#333">${lang==="zh"?"硕士研究生":"Master Students"}</h3><div class="member-block">`;
-        m.master.forEach(x=>{ joinHtml += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`; });
-        joinHtml += `</div>`;
+        teamHtml += `<h3 style="margin:12px 0 8px;color:#333">${lang==="zh"?"硕士研究生":"Master Students"}</h3><div class="member-block">`;
+        m.master.forEach(x=>teamHtml += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`);
+        teamHtml += `</div>`;
     }
     if(m.alumni && m.alumni.length>0){
-        joinHtml += `<h3 style="margin:12px 0 8px;color:#333">${lang==="zh"?"毕业生":"Alumni"}</h3><div class="member-block">`;
-        m.alumni.forEach(x=>{ joinHtml += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`; });
-        joinHtml += `</div>`;
+        teamHtml += `<h3 style="margin:12px 0 8px;color:#333">${lang==="zh"?"毕业生":"Alumni"}</h3><div class="member-block">`;
+        m.alumni.forEach(x=>teamHtml += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`);
+        teamHtml += `</div>`;
     }
-    if(!hasMember){
-        joinHtml += `<p style="color:#666">${lang==="zh"?"成员信息持续更新中":"Members coming soon..."}</p>`;
-    }
-    joinHtml += `</div>`;
-    document.getElementById("tab-join").innerHTML = joinHtml;
+    if(!hasMember) teamHtml += `<p class="placeholder-text">${lang==="zh"?"成员信息持续更新中":"Members coming soon..."}</p>`;
+    teamHtml += `</div>`;
+    document.getElementById("tab-team").innerHTML = teamHtml;
+
+    //11.活动动态
+    document.getElementById("tab-news").innerHTML = `<div class="section"><h2>${menuText.news}</h2><p class="placeholder-text">${lang==="zh"?"课题组活动动态持续更新...":"Group news coming soon..."}</p></div>`;
 }
 </script>
-
 </body>
 </html>
