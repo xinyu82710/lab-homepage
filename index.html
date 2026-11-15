@@ -11,7 +11,6 @@ body{
     background:#fff;
     line-height:1.7;
 }
-/* 顶部深红通栏，对标中农官网 */
 .top-bar{
     width:100%;
     height:36px;
@@ -23,7 +22,6 @@ body{
     display:flex;
     min-height: calc(100vh - 36px);
 }
-/* 左侧侧边菜单 */
 .sidebar{
     width:240px;
     border-right:1px solid #eee;
@@ -48,7 +46,6 @@ body{
 .sidebar-item:hover{
     background:#f7f7f7;
 }
-/* 右侧内容区 */
 .main{
     flex:1;
     padding:24px 32px;
@@ -79,7 +76,6 @@ body{
 .tab-content.active{
     display:block;
 }
-/* 个人资料板块 */
 .profile-wrap {
     display: flex;
     gap: 32px;
@@ -159,7 +155,6 @@ li{margin-bottom:10px;font-size:15.5px;}
 <body>
 <div class="top-bar"></div>
 <div class="wrap">
-    <!-- 左侧侧边菜单，顺序和截图完全一致 -->
     <div class="sidebar">
         <button class="sidebar-item active" data-tab="info">个人资料</button>
         <button class="sidebar-item" data-tab="overview">个人概况</button>
@@ -173,7 +168,6 @@ li{margin-bottom:10px;font-size:15.5px;}
         <button class="sidebar-item" data-tab="team">团队展示</button>
         <button class="sidebar-item" data-tab="news">活动动态</button>
     </div>
-    <!-- 右侧内容区 -->
     <div class="main">
         <div class="lang-switch">
             <button id="btnZh" class="active">中文</button>
@@ -198,7 +192,7 @@ let data = null;
 let currentLang = "zh";
 fetch("data.json")
 .then(res=>{
-    if(!res.ok) throw new Error("data.json 加载失败");
+    if(!res.ok) throw new Error("data.json 加载失败，请检查文件名大小写！");
     return res.json();
 })
 .then(d=>{
@@ -207,10 +201,9 @@ fetch("data.json")
 })
 .catch(err=>{
     console.error("加载错误：", err);
-    alert("data.json 加载失败：" + err.message);
+    alert("data.json加载失败：" + err.message);
 })
 
-// 语言切换
 document.getElementById("btnZh").onclick = ()=>{
     currentLang = "zh";
     document.getElementById("btnZh").classList.add("active");
@@ -224,7 +217,6 @@ document.getElementById("btnEn").onclick = ()=>{
     render();
 }
 
-// 侧边菜单点击
 document.querySelectorAll(".sidebar-item").forEach(btn=>{
     btn.onclick = ()=>{
         document.querySelectorAll(".sidebar-item").forEach(b=>b.classList.remove("active"));
@@ -249,21 +241,19 @@ function render(){
         tech: lang==="zh"?"科技成果":"Patents & Works",
         award: lang==="zh"?"荣誉及奖励":"Awards",
         admission: lang==="zh"?"招生信息":"Admission",
-        team: lang==="zh"?"团队展示":"Group Members",
+        team: lang==="zh"?"团队展示":"Team Members",
         news: lang==="zh"?"活动动态":"News"
     };
     const btns = document.querySelectorAll(".sidebar-item");
     const keys = ["info","overview","research","course","project","paper","tech","award","admission","team","news"];
-    keys.forEach((k,i)=>{
-        btns[i].textContent = menuText[k];
-    });
+    keys.forEach((k,i)=> btns[i].textContent = menuText[k]);
 
-    // 1.个人资料
+    // 个人资料
     document.getElementById("tab-info").innerHTML = `
         <div class="profile-wrap">
             <div class="profile-img-card">
                 <img class="profile-img" src="${data.pi.photo}" alt="${pi.name}"
-                onerror="this.style.display='none';this.parentNode.innerHTML='<div style=color:#999;padding:20px;text-align:center>PI photo</div>';">
+                onerror="this.style.display='none';this.parentNode.innerHTML='<div style=color:#999;padding:20px;text-align:center>照片缺失</div>';">
             </div>
             <div class="profile-text">
                 <h1 class="profile-name">${pi.name}</h1>
@@ -277,7 +267,7 @@ function render(){
         </div>
     `;
 
-    // 2.个人概况
+    //个人概况
     let overviewHtml = `<div class="section"><h2>${menuText.overview}</h2><div style="font-size:15.5px;line-height:1.8;">${pi.bio}</div></div>`;
     overviewHtml += `<div class="section"><h2>${lang==="zh"?"教育经历":"Education"}</h2><ul>`;
     pi.edu.forEach(item=>overviewHtml += `<li>${item.when} ${item.what}</li>`);
@@ -290,44 +280,47 @@ function render(){
     overviewHtml += `</ul></div>`;
     document.getElementById("tab-overview").innerHTML = overviewHtml;
 
-    //3.研究领域
+    //研究领域
     let resHtml = `<div class="section"><h2>${menuText.research}</h2>`;
     data.research[lang].forEach(r=>resHtml += `<div class="research-item"><strong>${r.title}</strong><br>${r.desc}</div>`);
     resHtml += `</div>`;
     document.getElementById("tab-research").innerHTML = resHtml;
 
-    //4.开授课程
-    document.getElementById("tab-course").innerHTML = `<div class="section"><h2>${menuText.course}</h2><p class="placeholder-text">${lang==="zh"?"课程信息持续更新中...":"Course information coming soon..."}</p></div>`;
+    //开授课程
+    let courseHtml = `<div class="section"><h2>${menuText.course}</h2><ul>`;
+    data.courses[lang].forEach(c=>courseHtml += `<li>${c}</li>`);
+    courseHtml += `</ul></div>`;
+    document.getElementById("tab-course").innerHTML = courseHtml;
 
-    //5.科研项目
+    //科研项目
     let proHtml = `<div class="section"><h2>${menuText.project}</h2><ul>`;
     data.projects[lang].forEach(p=>proHtml += `<li>${p}</li>`);
     proHtml += `</ul></div>`;
     document.getElementById("tab-project").innerHTML = proHtml;
 
-    //6.论文
+    //论文
     let paperHtml = `<div class="section"><h2>${menuText.paper}</h2><ul>`;
     data.publications.highlights.forEach(p=>paperHtml += `<li class="paper-item">${p}</li>`);
     paperHtml += `</ul></div>`;
     document.getElementById("tab-paper").innerHTML = paperHtml;
 
-    //7.科技成果
+    //科技成果
     let techHtml = `<div class="section"><h2>${menuText.tech}</h2><ul>`;
     data.ip[lang].forEach(i=>techHtml += `<li>${i}</li>`);
     techHtml += `</ul></div>`;
     document.getElementById("tab-tech").innerHTML = techHtml;
 
-    //8.荣誉及奖励
+    //荣誉奖励
     let awardHtml = `<div class="section"><h2>${menuText.award}</h2><ul>`;
     data.awards[lang].forEach(a=>awardHtml += `<li>${a}</li>`);
     awardHtml += `</ul></div>`;
     document.getElementById("tab-award").innerHTML = awardHtml;
 
-    //9.招生信息
+    //招生信息
     let admHtml = `<div class="section"><h2>${menuText.admission}</h2><div style="font-size:15.5px;line-height:1.8;">${data.join[lang]}</div></div>`;
     document.getElementById("tab-admission").innerHTML = admHtml;
 
-    //10.团队展示
+    //团队展示
     let teamHtml = `<div class="section"><h2>${menuText.team}</h2>`;
     const m = data.members;
     const hasMember = (m.postdoc && m.postdoc.length>0) || (m.phd && m.phd.length>0) || (m.master && m.master.length>0) || (m.alumni && m.alumni.length>0);
@@ -351,12 +344,15 @@ function render(){
         m.alumni.forEach(x=>teamHtml += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`);
         teamHtml += `</div>`;
     }
-    if(!hasMember) teamHtml += `<p class="placeholder-text">${lang==="zh"?"成员信息持续更新中":"Members coming soon..."}</p>`;
+    if(!hasMember) teamHtml += `<p class="placeholder-text">${lang==="zh"?"成员信息持续更新中":"Team members coming soon"}</p>`;
     teamHtml += `</div>`;
     document.getElementById("tab-team").innerHTML = teamHtml;
 
-    //11.活动动态
-    document.getElementById("tab-news").innerHTML = `<div class="section"><h2>${menuText.news}</h2><p class="placeholder-text">${lang==="zh"?"课题组活动动态持续更新...":"Group news coming soon..."}</p></div>`;
+    //活动动态
+    let newsHtml = `<div class="section"><h2>${menuText.news}</h2><ul>`;
+    data.news[lang].forEach(n=>newsHtml += `<li>${n}</li>`);
+    newsHtml += `</ul></div>`;
+    document.getElementById("tab-news").innerHTML = newsHtml;
 }
 </script>
 </body>
