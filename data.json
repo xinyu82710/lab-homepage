@@ -3,115 +3,135 @@
     "photo": "images/teacher.jpg",
     "zh": {
       "name": "曾也鲁",
-      "title": "教授、博士生导师",
+      "title": "教授",
       "email": "zengyelu@cau.edu.cn",
-      "office": "中国农业大学东校区 土地科学与技术学院",
-      "dept": "中国农业大学 土地科学与技术学院",
-      "bio": "主要从事土地遥感、植被定量遥感、农业遥感大数据、作物表型智能感知方向研究，融合遥感观测、机器学习与作物模型开展多源遥感反演、农田生态过程监测研究。",
+      "office": "西区土化楼339室",
+      "dept": "中国农业大学土地科学与技术学院",
+      "bio": "曾也鲁，中国农业大学土地科学与技术学院教授。主要从事三维植被荧光/光学辐射传输解析模型、植被生理与结构参数遥感反演、植被遥感时空大数据分析、异质性地表遥感产品真实性检验研究。",
       "edu": [
-        {"when":"20XX-20XX","what":"XX大学 遥感科学与技术 博士"},
-        {"when":"20XX-20XX","what":"XX大学 地理信息科学 本科"}
+        {"when":"2007.09‑2011.06","what":"武汉大学 遥感信息工程学院 本科，工学学士"},
+        {"when":"2011.09‑2016.07","what":"中国科学院遥感与数字地球研究所 地图学与地理信息系统，理学博士"}
       ],
       "work": [
-        {"when":"20XX-至今","what":"中国农业大学土地科学与技术学院，教授"},
-        {"when":"20XX-20XX","what":"XX单位 副研究员"}
+        {"when":"2016.07‑2017.07","what":"中国科学院遥感与数字地球研究所，遥感科学国家重点实验室，助理研究员"},
+        {"when":"2016.11‑2017.06","what":"美国斯坦福卡内基研究所，全球生态学系，博士后（联合资助）"},
+        {"when":"2017.07‑2019.12","what":"美国斯坦福卡内基研究所，全球生态学系，博士后Fellow"},
+        {"when":"2020.01‑2021.01","what":"美国西北太平洋国家实验室，全球变化联合研究中心，博士后"},
+        {"when":"2021.01‑2021.10","what":"美国威斯康辛‑麦迪逊大学，森林与野生生物系，助理科学家"},
+        {"when":"2021.10‑至今","what":"中国农业大学，土地科学与技术学院，教授"}
       ],
       "society": [
-        "中国遥感学会青年工作委员会委员",
-        "Remote Sensing、IEEE JSTARS 审稿人"
+        "Remote Sensing of Environment期刊 编委（2020‑ ）",
+        "美国地球物理学会(AGU)遥感理论建模专题分会场 主席（2020、2021）",
+        "IEEE GRSS遥感机理模型委员会 委员（2021‑）",
+        "GeoInsider硅谷遥感前沿讲坛系列 发起人（2019‑）"
       ]
     },
     "en": {
       "name": "Yelu Zeng",
-      "title": "Professor, PhD Supervisor",
+      "title": "Professor",
       "email": "zengyelu@cau.edu.cn",
-      "office": "College of Land Science and Technology, East Campus, China Agricultural University",
+      "office": "Room 339, Soil‑Chemical Building, West Campus",
       "dept": "College of Land Science and Technology, China Agricultural University",
-      "bio": "His research focuses on land remote sensing, quantitative vegetation remote sensing, agricultural remote sensing big data, and crop phenotype intelligent sensing. He integrates remote sensing observations, machine learning and crop models for multi-source remote sensing retrieval and farmland ecological monitoring.",
+      "bio": "Yelu Zeng is a Professor at College of Land Science and Technology, China Agricultural University. His research interests include 3‑D vegetation fluorescence / optical radiative transfer analytical models, retrieval of vegetation physiological and structural parameters, spatiotemporal big‑data analysis for vegetation remote sensing, and validation of remote‑sensing products over heterogeneous surfaces.",
       "edu": [
-        {"when":"20XX-20XX","what":"PhD, Remote Sensing, XXX University"},
-        {"when":"20XX-20XX","what":"BSc, GIS, XXX University"}
+        {"when":"2007.09‑2011.06","what":"B.Eng., Wuhan University, School of Remote Sensing and Information Engineering"},
+        {"when":"2011.09‑2016.07","what":"Ph.D., Cartography and Geographic Information System, RADI, CAS"}
       ],
       "work": [
-        {"when":"20XX-Present","what":"Professor, College of Land Science and Technology, CAU"},
-        {"when":"20XX-20XX","what":"Associate Researcher, XXX Institute"}
+        {"when":"2016.07‑2017.07","what":"Assistant Researcher, State Key Lab of Remote Sensing Science, RADI, CAS"},
+        {"when":"2016.11‑2017.06","what":"Postdoc (joint‑funded), Carnegie Institution for Science, Stanford"},
+        {"when":"2017.07‑2019.12","what":"Postdoctoral Fellow, Carnegie Institution for Science, Stanford"},
+        {"when":"2020.01‑2021.01","what":"Postdoc, Joint Global Change Research Institute, PNNL"},
+        {"when":"2021.01‑2021.10","what":"Assistant Scientist, University of Wisconsin‑Madison"},
+        {"when":"2021.10‑Present","what":"Professor, College of Land Science and Technology, China Agricultural University"}
       ],
       "society": [
-        "Member of Youth Committee of China Remote Sensing Society",
-        "Reviewer for Remote Sensing, IEEE JSTARS"
+        "Associate Editor, Remote Sensing of Environment (2020‑ )",
+        "Session Chair, AGU Remote Sensing Theory & Modeling (2020,2021)",
+        "Member, IEEE GRSS Remote‑Sensing Mechanisms Committee (2021‑)",
+        "Founder, GeoInsider Silicon Valley Remote‑Sensing Seminar Series (2019‑)"
       ]
     }
   },
   "research": {
     "zh": [
-      {"title":"农业定量遥感","desc":"植被生化参数、LAI、叶绿素、水分遥感反演，时序遥感物候提取"},
-      {"title":"农田遥感与智能感知","desc":"无人机、物候相机、卫星多源数据协同作物长势、胁迫识别"},
-      {"title":"遥感与作物模型耦合","desc":"DSSAT、WOFOST 同化遥感数据，产量预估、干旱胁迫模拟"},
-      {"title":"土地利用与生态遥感","desc":"土地覆被制图、碳汇、农田生态系统遥感监测"}
+      {"title":"三维植被结构下的荧光/光学辐射传输解析模型","desc":"叶片‑冠层‑像元多尺度与复杂地表模拟"},
+      {"title":"基于荧光/光学的植物生理与结构参数反演","desc":"及在长势/干旱/霜冻/病虫害监测中的应用"},
+      {"title":"植被遥感时空大数据分析、异质性地表遥感产品真实性检验","desc":"空间采样与代表性评价"}
     ],
     "en": [
-      {"title":"Quantitative Agricultural Remote Sensing","desc":"Retrieval of vegetation biochemical parameters, LAI, chlorophyll, water content; time-series phenology extraction."},
-      {"title":"Farmland Remote Sensing & Intelligent Sensing","desc":"Multi-source UAV, phenocam and satellite data for crop growth and stress detection."},
-      {"title":"Remote Sensing and Crop Model Coupling","desc":"Data assimilation into DSSAT/WOFOST for yield forecasting and drought simulation."},
-      {"title":"Land Use & Ecological Remote Sensing","desc":"Land cover mapping, carbon sink and farmland ecosystem monitoring."}
+      {"title":"Analytical fluorescence / optical radiative‑transfer models for 3‑D vegetation","desc":"Leaf‑canopy‑pixel multi‑scale simulation over complex land surfaces"},
+      {"title":"Retrieval of vegetation physiological and structural parameters from fluorescence & optical observations","desc":"Applications for growth, drought, frost and pest monitoring"},
+      {"title":"Vegetation remote‑sensing big‑data, product validation for heterogeneous surfaces","desc":"Spatial sampling and representativeness evaluation"}
     ]
   },
   "courses": {
-    "zh": ["遥感原理与应用","农业遥感","地理信息系统","定量遥感"],
-    "en": ["Principles of Remote Sensing","Agricultural Remote Sensing","GIS","Quantitative Remote Sensing"]
+    "zh": [],
+    "en": []
   },
   "projects": {
     "zh": [
-      "国家自然科学基金面上项目：基于时序多源遥感的农田作物胁迫识别与同化模拟",
-      "国家自然科学基金青年项目：植被光谱解混与作物表型参数反演研究",
-      "国家重点研发计划子课题：黑土地农田长势遥感监测与产量预估",
-      "中国农业大学人才启动项目：农田高分辨率遥感智能感知平台",
-      "横向课题：区域耕地质量遥感监测与评价技术服务",
-      "自然资源部开放课题：植被覆盖度遥感反演算法优化"
+      "国家级高层次青年人才项目 (2023‑2025)",
+      "中国农业大学 “杰出人才” 项目 (2021‑2026)",
+      "国家自然科学基金面上项目：复杂冠层结构下的三维植被荧光与反射率辐射传输解析模型构建与应用（2023.01‑2026.12）",
+      "国家自然科学基金青年基金：复杂地形下植被遥感辐射传输建模及叶面积指数反演研究（2018.01‑2020.12）",
+      "遥感科学国家重点实验室开放基金：基于光谱不变理论的三维植被辐射传输统一模型及参数反演（2019.01‑2020.12）",
+      "中科院遥感地球所研究生所长基金：像元尺度非均质地表可见光/近红外辐射传输模型构建（2014.01‑2015.01）"
     ],
     "en": [
-      "NSFC General Program: Crop stress identification and assimilation simulation using time-series multi-source remote sensing",
-      "NSFC Young Program: Vegetation spectral unmixing and crop phenotype retrieval",
-      "Sub-project of National Key R&D: Remote sensing monitoring and yield estimation for black soil farmland",
-      "CAU Talent Startup Fund: High-resolution intelligent remote sensing platform for farmland",
-      "Industrial Project: Remote sensing assessment of cultivated land quality",
-      "Open Fund from MNR: Optimization of fractional vegetation cover retrieval algorithm"
+      "National High‑level Young Talent Program (2023‑2025)",
+      "CAU Distinguished Talent Program (2021‑2026)",
+      "NSFC General Program: 3‑D analytical radiative‑transfer model for vegetation fluorescence and reflectance over complex canopy (2023.01‑2026.12)",
+      "NSFC Young Scientists Fund: Radiative‑transfer modeling and LAI retrieval over rugged terrain (2018.01‑2020.12)",
+      "Open Fund of State Key Lab of Remote Sensing Science: Unified 3‑D vegetation RTM based on spectral‑invariant theory (2019.01‑2020.12)",
+      "Director Graduate Fund, RADI CAS: Visible/NIR radiative‑transfer model for heterogeneous pixel‑scale surfaces (2014.01‑2015.01)"
     ]
   },
   "publications": {
     "highlights": [
-      "Zeng Y, et al. Retrieving crop LAI from UAV hyperspectral data using transformer network. ISPRS Journal of Photogrammetry and Remote Sensing, 2024.",
-      "Zeng Y, et al. Phenology extraction from digital phenocam time series for rice. Remote Sensing of Environment, 2023.",
-      "Zeng Y, et al. Drought assimilation into DSSAT with satellite observations. Agricultural and Forest Meteorology, 2022.",
-      "曾也鲁, 等. 物候相机时序信号的水稻穗期识别方法. 遥感学报, 2024.",
-      "曾也鲁, 等. 高光谱遥感作物叶绿素反演的机器学习对比研究. 农业工程学报, 2023.",
-      "Zeng Y, et al. Land cover mapping in fragmented agricultural regions using Sentinel-2. IEEE JSTARS, 2022.",
-      "曾也鲁, 等. 基于SHAP的遥感反演模型解释性研究. 遥感技术与应用, 2023."
+      "Zeng, Y., Hao, D., Huete, A., et al. Optical vegetation indices for monitoring terrestrial ecosystems globally. <i>Nature Reviews Earth & Environment</i>, 2022.",
+      "Zeng, Y., Chen, M., Hao, D., et al. Combining near‑infrared radiance of vegetation and fluorescence spectroscopy to detect abiotic stresses. <i>Remote Sensing of Environment</i>, 270, 112856, 2022.",
+      "Hao, D., Zeng, Y.*, et al. Adjusting solar‑induced fluorescence to nadir‑viewing provides a better proxy for GPP. <i>ISPRS J. of Photogrammetry and Remote Sensing</i>, 186, 157‑169, 2022.",
+      "Zeng, Y., Hao, D.*, et al. Estimating near‑infrared reflectance of vegetation from hyperspectral data. <i>Remote Sensing of Environment</i>, 267, 112723, 2021.",
+      "Zeng, Y., Badgley, G., et al. A radiative transfer model for solar induced fluorescence using spectral invariants theory. <i>Remote Sensing of Environment</i>, 240, 111678, 2020."
     ]
   },
   "ip": {
     "zh": [
-      "发明专利：一种基于物候相机的水稻穗期自动识别方法（ZL2023XXXXXX）",
-      "发明专利：一种无人机高光谱LAI快速反演装置及方法（ZL2022XXXXXX）",
-      "软件著作权：农田遥感时序数据预处理系统V1.0",
-      "软件著作权：DSSAT遥感数据同化工具软件V1.0",
-      "实用新型专利：田间多光谱采集固定监测装置（ZL2024XXXXXX）"
+      "发明专利：李静、曾也鲁、柳钦火. 一种对遥感数据进行观测质量分级的方法. ZL 2015 1 0251635.3",
+      "参编著作：《遥感云计算与科学分析》，科学出版社，2020",
+      "参编著作：《遥感监测绿皮书‑中国可持续发展遥感监测报告(2016)》，社会科学文献出版社，2017",
+      "参编著作：《全球生态环境遥感监测2014年度报告》，科学出版社，2015"
     ],
     "en": [
-      "Patent: Automatic rice heading detection method using phenocam (ZL2023XXXXXX)",
-      "Patent: UAV hyperspectral LAI fast retrieval method (ZL2022XXXXXX)",
-      "Software Copyright: Farmland remote sensing time series preprocessing system V1.0",
-      "Software Copyright: DSSAT remote sensing assimilation toolkit V1.0",
-      "Utility Model Patent: Field multispectral monitoring device (ZL2024XXXXXX)"
+      "Patent: Li J., Zeng Y., Liu Q. Method for grading observation quality of remote‑sensing data. ZL 2015 1 0251635.3",
+      "Book Chapter: Remote‑Sensing Cloud Computing and Scientific Analysis. Science Press,2020",
+      "Book Chapter: Green Book of Remote‑Sensing Monitoring(2016). Social Sciences Academic Press,2017",
+      "Book Chapter: Global Ecosystem Remote‑Sensing Monitoring Report 2014. Science Press,2015"
     ]
   },
   "awards": {
-    "zh": ["校级优秀青年教师","遥感学会青年学术奖","优秀指导教师"],
-    "en": ["Excellent Young Faculty Award","Youth Academic Award of China Remote Sensing Society","Excellent Supervisor Award"]
+    "zh": [
+      "国家级高层次青年人才（2022）",
+      "《麻省理工科技评论》亚太区“35岁以下科技创新35人”（2022）",
+      "中国农业大学高层次“杰出人才”计划 (2021)",
+      "第三届“李小文遥感科学青年奖” (2021)",
+      "Remote Sensing of Environment期刊优秀审稿人（2020）",
+      "北京市优秀毕业生、中科院优秀毕业生（2016）"
+    ],
+    "en": [
+      "National High‑level Young Talent (2022)",
+      "MIT Technology Review Innovators Under 35‑Asia Pacific (2022)",
+      "CAU Distinguished Talent Program (2021)",
+      "3rd Li Xiaowen Remote‑Sensing Youth Scientist Award (2021)",
+      "Outstanding Reviewer, Remote Sensing of Environment (2020)",
+      "Excellent Graduate of Beijing / CAS (2016)"
+    ]
   },
   "join": {
-    "zh": "课题组常年招收博士、硕士研究生，欢迎遥感、GIS、农业资源、计算机、农学相关方向同学联系。有遥感、Python、机器学习、GEE、作物模型基础者优先。",
-    "en": "We recruit PhD and master students every year. Students with background in remote sensing, GIS, agronomy, computer science are welcome. Experience in Python, machine learning, GEE or crop models is preferred."
+    "zh": "课题组常年招收博士、硕士研究生与博士后，欢迎遥感、地理信息、生态学、农学、计算机、数学背景的同学报考。有意者请将简历、成绩单、代表作发送至PI邮箱。",
+    "en": "We recruit PhD, master students and postdocs. Candidates with background in remote sensing, GIS, ecology, agronomy, computer science or mathematics are welcome. Please send CV, transcript and representative papers to PI email."
   },
   "members": {
     "postdoc": [],
@@ -120,7 +140,7 @@
     "alumni": []
   },
   "news": {
-    "zh": ["课题组最新研究成果发表于RSE","参加全国遥感大会并做口头报告","研究生获得校级奖学金"],
-    "en": ["New paper published in RSE","Oral presentation at National Remote Sensing Conference","Student awarded university scholarship"]
+    "zh": [],
+    "en": []
   }
 }
