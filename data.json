@@ -2,159 +2,148 @@
   "pi": {
     "photo": "photo.jpg",
     "zh": {
-      "name": "罗必良",
+      "name": "曾也鲁",
       "title": "教授、博士生导师",
-      "email": "lbc@cau.edu.cn",
-      "office": "中国农业大学东校区",
+      "email": "zengyelu@cau.edu.cn",
+      "office": "中国农业大学东校区 土地科学与技术学院",
       "dept": "中国农业大学 土地科学与技术学院",
-      "bio": "罗必良，中国农业大学教授、博士生导师。主要从事农业经济、土地制度、乡村治理等领域研究，长期聚焦农地流转、耕地保护、农业规模化经营等问题，主持多项国家级科研项目，在国内外重要期刊发表系列学术论文，担任多个学术期刊编委。",
+      "bio": "曾也鲁，中国农业大学土地科学与技术学院教授、博导，国家级高层次青年人才，达摩院青橙奖获得者。主要从事植被定量遥感、三维辐射传输建模、作物表型遥感、森林碳储量遥感估算等方向研究，融合无人机LiDAR、高光谱、卫星遥感与深度学习，发展植被结构与功能遥感反演方法。主持多项国家自然科学基金项目，成果发表于Remote Sensing of Environment等遥感领域一区Top期刊。",
       "edu": [
-        {
-          "when": "1978–1982",
-          "what": "华南农业大学 农业经济管理 学士"
-        },
-        {
-          "when": "1992–1995",
-          "what": "南京农业大学 农业经济管理 博士"
-        }
+        {"when": "2009–2013", "what": "武汉大学 遥感科学与技术 学士"},
+        {"when": "2013–2017", "what": "中国科学院遥感与数字地球研究所 地图学与地理信息系统 博士"}
       ],
       "work": [
-        {
-          "when": "1982–2021",
-          "what": "华南农业大学，历任讲师、副教授、教授、博士生导师"
-        },
-        {
-          "when": "2021–至今",
-          "what": "中国农业大学土地科学与技术学院 教授、博士生导师"
-        }
+        {"when": "2017–2019", "what": "美国斯坦福大学卡内基研究所 全球生态学系 博士后"},
+        {"when": "2020–2021", "what": "美国西北太平洋国家实验室 全球变化联合研究中心 博士后"},
+        {"when": "2021–2021", "what": "美国威斯康星大学麦迪逊分校 森林与野生生物系 助理科学家"},
+        {"when": "2021–至今", "what": "中国农业大学土地科学与技术学院 教授、博士生导师"}
       ],
       "society": [
-        "国家社会科学基金重大项目首席专家",
-        "《中国农村经济》《农业经济问题》编委",
-        "中国农业经济学会常务理事"
+        "国家级高层次青年人才",
+        "达摩院青橙奖获得者",
+        "遥感领域多个国际期刊审稿人",
+        "土地科学与技术学院人才青年委员"
       ]
     },
     "en": {
-      "name": "Biliang Luo",
+      "name": "Yelu Zeng",
       "title": "Professor, PhD Supervisor",
-      "email": "lbc@cau.edu.cn",
+      "email": "zengyelu@cau.edu.cn",
       "office": "East Campus, China Agricultural University",
       "dept": "College of Land Science and Technology, China Agricultural University",
-      "bio": "Biliang Luo is a professor and PhD supervisor at China Agricultural University. His research focuses on agricultural economics, land institutions and rural governance. He has long been committed to farmland transfer, cultivated land protection and agricultural scale management. He presided over many national research projects and published a large number of papers in top journals. He serves as editorial board member for several academic journals.",
+      "bio": "Yelu Zeng is a professor and PhD supervisor at the College of Land Science and Technology, China Agricultural University. His research focuses on quantitative vegetation remote sensing, 3D radiative transfer modeling, crop phenotyping, and forest carbon stock estimation. His group integrates UAV LiDAR, hyperspectral, satellite imagery and deep learning to develop new methods for retrieving vegetation structure and functions. He is the recipient of the Damo Academy Green Orange Award and leads multiple NSFC projects. Publications are mainly in top journals such as Remote Sensing of Environment.",
       "edu": [
-        {
-          "when": "1978–1982",
-          "what": "B.S., Agricultural Economics & Management, South China Agricultural University"
-        },
-        {
-          "when": "1992–1995",
-          "what": "PhD, Agricultural Economics & Management, Nanjing Agricultural University"
-        }
+        {"when": "2009–2013", "what": "B.S., Remote Sensing Science & Technology, Wuhan University"},
+        {"when": "2013–2017", "what": "PhD, Cartography & GIS, AIR, CAS"}
       ],
       "work": [
-        {
-          "when": "1982–2021",
-          "what": "South China Agricultural University, Lecturer, Associate Professor, Professor"
-        },
-        {
-          "when": "2021–Present",
-          "what": "Professor, College of Land Science and Technology, China Agricultural University"
-        }
+        {"when": "2017–2019", "what": "Postdoc, Carnegie Institution for Science, Stanford University"},
+        {"when": "2020–2021", "what": "Postdoc, Pacific Northwest National Laboratory"},
+        {"when": "2021–2021", "what": "Assistant Scientist, University of Wisconsin-Madison"},
+        {"when": "2021–Present", "what": "Professor, College of Land Science and Technology, CAU"}
       ],
       "society": [
-        "Chief Expert of National Social Science Fund Major Project",
-        "Editorial Board of Chinese Rural Economy, Issues in Agricultural Economy",
-        "Standing Director of Chinese Agricultural Economics Society"
+        "National High-level Young Talent",
+        "Recipient of Damo Academy Green Orange Award",
+        "Reviewer for multiple remote sensing journals",
+        "Youth Committee Member of CLST, CAU"
       ]
     }
   },
   "research": {
     "zh": [
-      {
-        "title": "农地制度与农地流转",
-        "desc": "农地产权细分、流转机制、交易费用与农户行为研究。"
-      },
-      {
-        "title": "耕地保护与粮食安全",
-        "desc": "耕地质量管护、非农化非粮化治理、粮食生产激励机制研究。"
-      },
-      {
-        "title": "农业分工与服务规模化",
-        "desc": "农业社会化服务、连片经营、农业规模经营路径研究。"
-      },
-      {
-        "title": "乡村治理与农村发展",
-        "desc": "乡村要素配置、集体经济、城乡融合发展研究。"
-      }
+      {"title": "三维植被辐射传输模型", "desc": "叶片-冠层-像元多尺度辐射传输建模，植被荧光、反射率耦合模拟，复杂冠层遥感信号解耦。"},
+      {"title": "作物高通量表型遥感", "desc": "无人机摄影测量、LiDAR、高光谱，提取作物叶倾角、株高、生物量等结构参数，面向育种与智慧农业。"},
+      {"title": "森林碳储量遥感估算", "desc": "多源遥感融合，单木尺度森林结构参数反演、碳储量制图，支撑森林碳汇评估。"},
+      {"title": "植被遥感时空大数据与真实性检验", "desc": "异质性地表遥感产品验证、时序遥感植被动态监测。"}
     ],
     "en": [
-      {
-        "title": "Farmland Institution and Land Transfer",
-        "desc": "Research on farmland property rights, transfer mechanism, transaction cost and farmer behavior."
-      },
-      {
-        "title": "Cultivated Land Protection and Food Security",
-        "desc": "Cultivated land quality management, non-agricultural & non-grain governance, incentive mechanism for grain production."
-      },
-      {
-        "title": "Agricultural Division of Labor and Service Scale",
-        "desc": "Agricultural socialized service, contiguous farming and paths of agricultural scale operation."
-      },
-      {
-        "title": "Rural Governance and Rural Development",
-        "desc": "Rural factor allocation, rural collective economy and urban-rural integration."
-      }
+      {"title": "3D Vegetation Radiative Transfer Modeling", "desc": "Multi-scale radiative transfer simulation for leaf-canopy-pixel, coupling of fluorescence and reflectance, signal decomposition over complex canopy."},
+      {"title": "High-Throughput Crop Phenotyping by Remote Sensing", "desc": "UAV photogrammetry, LiDAR and hyperspectral sensing for crop leaf angle, height and biomass estimation for breeding and smart agriculture."},
+      {"title": "Forest Carbon Stock Estimation", "desc": "Multi-source remote sensing fusion for tree-level forest structure retrieval and carbon mapping to support forest carbon sink assessment."},
+      {"title": "Vegetation Remote Sensing Big Data & Validation", "desc": "Validation of remote sensing products and time-series vegetation dynamic monitoring over heterogeneous landscapes."}
+    ]
+  },
+  "courses": {
+    "zh": [
+      "遥感原理与应用（本科）",
+      "定量遥感（研究生）",
+      "植被遥感专题研讨"
+    ],
+    "en": [
+      "Principles of Remote Sensing (Undergraduate)",
+      "Quantitative Remote Sensing (Graduate)",
+      "Seminar on Vegetation Remote Sensing"
     ]
   },
   "projects": {
     "zh": [
-      "国家社科基金重大项目：农地流转、耕地保护与粮食安全研究",
-      "国家自然科学基金面上项目：农地交易的契约选择与治理机制",
-      "农业农村部委托项目：农业社会化服务体系建设研究"
+      "国家自然科学基金面上项目：复杂冠层结构下的三维植被荧光与反射率辐射传输解析模型构建与应用（2023–2026）",
+      "国家自然科学基金青年项目：复杂地形下植被遥感辐射传输建模及叶面积指数反演研究（2018–2020）",
+      "国家级高层次青年人才项目（2023–2025）",
+      "中国农业大学杰出人才项目（2021–2026）"
     ],
     "en": [
-      "Major Project of National Social Science Fund: Farmland Transfer, Cultivated Land Protection and Food Security",
-      "General Project of National Natural Science Foundation: Contract Choice and Governance of Farmland Transaction",
-      "Entrusted Project by MARA: Research on Agricultural Socialized Service System"
+      "General Project of NSFC: 3D Vegetation Fluorescence & Reflectance Radiative Transfer Model for Complex Canopy (2023–2026)",
+      "Young Project of NSFC: Radiative Transfer Modeling and LAI Retrieval over Rugged Terrain (2018–2020)",
+      "National High-level Young Talent Program (2023–2025)",
+      "Distinguished Talent Program, China Agricultural University (2021–2026)"
     ]
   },
   "publications": {
     "highlights": [
-      "罗必良. 农地流转的交易费用：一个分析框架[J]. 中国农村经济, 2014.",
-      "罗必良. 从产权细分到分工深化：农业规模经营的新路径[J]. 农业经济问题, 2017.",
-      "Luo B. Land rights and farmland transfer in China[J]. China Economic Review, 2020."
+      "A UAV-based framework for field-scale extraction of leaf inclination angles in soybean canopies. Remote Sensing of Environment, 2026.",
+      "Tree-level carbon stock estimations across diverse species using multi-source remote sensing integration. Computers and Electronics in Agriculture, 2025.",
+      "曾也鲁. 复杂冠层植被辐射传输建模与遥感反演研究进展[J]. 遥感学报."
     ]
   },
   "ip": {
     "zh": [
-      "专著：《农地流转与农业规模经营》",
-      "专著：《耕地保护的制度逻辑》"
+      "发明专利：基于无人机点云的作物叶倾角高通量提取方法",
+      "软件著作权：三维植被辐射传输模拟系统"
     ],
     "en": [
-      "Monograph: Farmland Transfer and Agricultural Scale Operation",
-      "Monograph: Institutional Logic of Cultivated Land Protection"
+      "Patent: UAV point cloud based high-throughput leaf inclination angle extraction method",
+      "Software Copyright: 3D Vegetation Radiative Transfer Simulation System"
     ]
   },
   "awards": {
     "zh": [
-      "教育部高等学校科学研究优秀成果奖（人文社科）一等奖",
-      "中国农村发展研究奖",
-      "广东省哲学社会科学优秀成果一等奖"
+      "达摩院青橙奖",
+      "国家级高层次青年人才",
+      "中科院院长优秀奖"
     ],
     "en": [
-      "First Prize, Outstanding Research Achievement Award (Humanities & Social Sciences), MOE",
-      "China Rural Development Research Award",
-      "First Prize, Guangdong Philosophy and Social Science Outstanding Achievement Award"
+      "Damo Academy Green Orange Award",
+      "National High-level Young Talent",
+      "CAS President’s Excellence Award"
     ]
   },
   "join": {
-    "zh": "本课题组常年招收博士、硕士研究生，欢迎具有农业经济、土地资源管理、发展经济学背景的同学联系报考。请发送个人简历、研究兴趣至邮箱。",
-    "en": "We recruit PhD and master students every year. Candidates with background in agricultural economics, land management and development economics are welcome. Please send your CV and research statement to the email."
+    "zh": "课题组常年招收博士、硕士研究生，欢迎遥感、GIS、测绘、农业信息化、生态学背景同学报考。课题组主要开展无人机遥感、激光雷达、深度学习、植被辐射传输建模相关研究，有充足科研项目支撑。有意向请发送简历、成绩单、研究兴趣至邮箱 zengyelu@cau.edu.cn。",
+    "en": "We recruit PhD and master students every year. Candidates with background in remote sensing, GIS, surveying, agri-informatics and ecology are welcome. Our research covers UAV remote sensing, LiDAR, deep learning and radiative transfer modeling. Please send CV, transcript and research statement to zengyelu@cau.edu.cn."
   },
   "members": {
     "postdoc": [],
-    "phd": [],
-    "master": [],
+    "phd": [
+      {"name":"李青", "info":"博士研究生，森林碳储量、作物表型遥感"}
+    ],
+    "master": [
+      {"name":"尹嘉为", "info":"硕士研究生，多源遥感融合、单木碳储量估算"},
+      {"name":"闫文慧", "info":"硕士研究生，植被高光谱信号解耦"}
+    ],
     "alumni": []
+  },
+  "news": {
+    "zh": [
+      "2026.11 课题组在高光谱遥感解耦冠层植被与土壤交互信号方向取得进展",
+      "2026.04 大豆冠层叶倾角高通量提取成果发表于Remote Sensing of Environment",
+      "2025.03 多树种单木碳储量估算成果发表于Computers and Electronics in Agriculture"
+    ],
+    "en": [
+      "Nov 2026: New progress on decoupling canopy vegetation and soil signals using hyperspectral remote sensing",
+      "Apr 2026: UAV-based leaf inclination work published in Remote Sensing of Environment",
+      "Mar 2025: Tree-level carbon stock estimation published in Computers and Electronics in Agriculture"
+    ]
   }
 }
