@@ -1,0 +1,165 @@
+{
+  "pi": {
+    "photo": "images/zeng-yelu.jpg",
+    "zh": {
+      "name": "曾也鲁",
+      "nameEn": "Yelu Zeng, Ph.D.",
+      "title": "教授 · 博士生导师",
+      "tagline": "围绕植被遥感辐射传输建模、植被生理与结构参数反演、植被遥感时空大数据分析开展研究。",
+      "bio": "曾也鲁，中国农业大学土地科学与技术学院教授、博士生导师。本科毕业于武汉大学遥感信息工程学院，博士毕业于中国科学院遥感与数字地球研究所。先后在美国斯坦福卡内基全球生态学系、美国西北太平洋国家实验室、美国威斯康星大学麦迪逊分校从事博士后与助理科学家研究。入选国家级高层次青年人才（2022）、《麻省理工科技评论》亚太区\"35 岁以下科技创新 35 人\"（2022）、中国农业大学杰出人才计划（2021）。研究方向涵盖叶片—冠层—像元多尺度植被荧光/光学辐射传输解析模型、植被生理与结构参数遥感反演、植被遥感时空大数据分析与遥感产品真实性检验。",
+      "email": "zengyelu@cau.edu.cn",
+      "office": "西区土化楼 339 室",
+      "dept": "中国农业大学 土地科学与技术学院",
+      "edu": [
+        {"when": "2007.09 – 2011.06", "what": "武汉大学 遥感信息工程学院，工学学士"},
+        {"when": "2011.09 – 2016.07", "what": "中国科学院遥感与数字地球研究所，地图学与地理信息系统，理学博士"}
+      ],
+      "work": [
+        {"when": "2016.07 – 2017.07", "what": "中科院遥感与数字地球研究所 遥感科学国家重点实验室，助理研究员"},
+        {"when": "2017.07 – 2019.12", "what": "美国斯坦福卡内基研究所 全球生态学系，博士后 Fellow"},
+        {"when": "2020.01 – 2021.01", "what": "美国西北太平洋国家实验室 全球变化联合研究中心，博士后"},
+        {"when": "2021.01 – 2021.10", "what": "美国威斯康星大学麦迪逊分校 森林与野生生物系，助理科学家"},
+        {"when": "2021.10 – 至今", "what": "中国农业大学 土地科学与技术学院，教授"}
+      ],
+      "society": [
+        "Remote Sensing of Environment 期刊 编委（2020– ）",
+        "美国地球物理学会（AGU）遥感理论建模分会场主席（2020、2021）",
+        "IEEE GRSS 遥感机理模型委员会 委员（2021– ）",
+        "GeoInsider 硅谷遥感前沿讲坛系列 发起人（2019– ）"
+      ]
+    },
+    "en": {
+      "name": "Yelu Zeng",
+      "nameEn": "Yelu Zeng, Ph.D.",
+      "title": "Professor, Ph.D. Supervisor",
+      "tagline": "Radiative transfer modeling, vegetation parameter retrieval, and spatiotemporal big data in vegetation remote sensing.",
+      "bio": "Yelu Zeng is a Professor at the College of Land Science and Technology, China Agricultural University. He received his B.Eng. from Wuhan University and Ph.D. from the Institute of Remote Sensing and Digital Earth, CAS. He was a postdoctoral fellow at the Carnegie Institution for Science (Stanford), PNNL, and UW-Madison. He is a recipient of the National Young Talent Program (2022) and MIT Technology Review Innovators Under 35 (Asia Pacific, 2022). His research focuses on leaf-to-canopy-to-pixel radiative transfer models, vegetation parameter retrieval, and product validation over heterogeneous surfaces.",
+      "email": "zengyelu@cau.edu.cn",
+      "office": "Room 339, Soil and Chemical Building, West Campus",
+      "dept": "College of Land Science and Technology, China Agricultural University",
+      "edu": [
+        {"when": "2007.09 – 2011.06", "what": "B.Eng., School of Remote Sensing, Wuhan University"},
+        {"when": "2011.09 – 2016.07", "what": "Ph.D., Cartography & GIS, RADI, CAS"}
+      ],
+      "work": [
+        {"when": "2016.07 – 2017.07", "what": "Assistant Researcher, State Key Lab of Remote Sensing Science, RADI, CAS"},
+        {"when": "2017.07 – 2019.12", "what": "Postdoctoral Fellow, Carnegie Institution for Science, Stanford"},
+        {"when": "2020.01 – 2021.01", "what": "Postdoc, JGCRI, Pacific Northwest National Laboratory"},
+        {"when": "2021.01 – 2021.10", "what": "Assistant Scientist, UW-Madison"},
+        {"when": "2021.10 – present", "what": "Professor, China Agricultural University"}
+      ],
+      "society": [
+        "Associate Editor, Remote Sensing of Environment (2020– )",
+        "Chair, AGU Remote Sensing Theory & Modeling Session (2020, 2021)",
+        "Member, IEEE GRSS Remote Sensing Mechanisms Committee (2021– )",
+        "Founder, GeoInsider Seminar Series (2019– )"
+      ]
+    }
+  },
+
+  "members": {
+    "postdoc": [],
+    "phd": [],
+    "master": [],
+    "alumni": []
+  },
+
+  "research": {
+    "zh": [
+      {"title": "多尺度植被辐射传输模型", "desc": "叶片—冠层—像元尺度的荧光/光学辐射传输解析模型，含复杂冠层结构与异质地表。"},
+      {"title": "植被参数遥感反演", "desc": "基于荧光/光学信号的植物生理与结构参数反演，服务于长势、干旱、霜冻、病虫害监测。"},
+      {"title": "时空大数据与真实性检验", "desc": "植被遥感时空大数据分析、异质性地表遥感产品真实性检验、空间采样与代表性评价。"}
+    ],
+    "en": [
+      {"title": "Multi-scale Radiative Transfer", "desc": "Analytical SIF/optical radiative transfer models from leaf to canopy to pixel, over complex canopies and heterogeneous surfaces."},
+      {"title": "Vegetation Parameter Retrieval", "desc": "Retrieval of physiological and structural parameters for growth, drought, frost and pest monitoring."},
+      {"title": "Big Data & Validation", "desc": "Spatiotemporal analysis, product validation over heterogeneous surfaces, and spatial sampling."}
+    ]
+  },
+
+  "publications": {
+    "2022": [
+      "Zeng, Y., Hao, D., Huete, A., et al. Optical vegetation indices for monitoring terrestrial ecosystems globally. <i>Nature Reviews Earth & Environment</i>, 2022.",
+      "Zeng, Y., Chen, M., Hao, D., et al. Combining near-infrared radiance of vegetation and fluorescence spectroscopy to detect abiotic stresses. <i>Remote Sensing of Environment</i>, 270, 112856, 2022.",
+      "Hao, D., Zeng, Y.*, et al. Adjusting solar-induced fluorescence to nadir-viewing provides a better proxy for GPP. <i>ISPRS J. of Photogrammetry and Remote Sensing</i>, 186, 157–169, 2022."
+    ],
+    "2021": [
+      "Zeng, Y., Hao, D.*, et al. Estimating near-infrared reflectance of vegetation from hyperspectral data. <i>RSE</i>, 267, 112723, 2021.",
+      "Hao, D., Zeng, Y.*, et al. Practical approaches for normalizing directional SIF to a standard viewing geometry. <i>RSE</i>, 255, 112171, 2021.",
+      "Hao, D., Asrar, G.R., Zeng, Y., et al. Potential of hotspot SIF for better tracking terrestrial photosynthesis. <i>Global Change Biology</i>, 27(10), 2144–2158, 2021."
+    ],
+    "2020": [
+      "Zeng, Y., Badgley, G., et al. A radiative transfer model for solar induced fluorescence using spectral invariants theory. <i>RSE</i>, 240, 111678, 2020.",
+      "Zeng, Y., Li, J., et al. A Radiative Transfer Model for Patchy Landscapes Based on Stochastic RRT. <i>IEEE TGRS</i>, 58(4), 2571–2589, 2020."
+    ],
+    "2019": [
+      "Zeng, Y.#*, Badgley, G.#, et al. A practical approach for estimating the escape ratio of near-infrared SIF. <i>RSE</i>, 232, 111209, 2019."
+    ],
+    "2016": [
+      "Zeng, Y., Li, J.*, Liu, Q.*, et al. A Radiative Transfer Model for Heterogeneous Agro-Forestry Scenarios. <i>IEEE TGRS</i>, 54(8), 4613–4628, 2016."
+    ]
+  },
+
+  "projects": {
+    "zh": [
+      "国家级高层次青年人才项目（2023–2025）",
+      "中国农业大学\"杰出人才\"项目（2021–2026）",
+      "国家自然科学基金面上项目：复杂冠层结构下的三维植被荧光与反射率辐射传输解析模型构建与应用（2023.01–2026.12）",
+      "国家自然科学基金青年基金：复杂地形下植被遥感辐射传输建模及叶面积指数反演研究（2018–2020）"
+    ],
+    "en": [
+      "National Young Talent Program (2023–2025)",
+      "CAU Distinguished Professor Fund (2021–2026)",
+      "NSFC General Program: Analytical 3D vegetation fluorescence & reflectance RRT under complex canopy (2023–2026)",
+      "NSFC Young Scientist Program: RRT modeling and LAI retrieval over complex terrain (2018–2020)"
+    ]
+  },
+
+  "ip": {
+    "zh": [
+      "李静、曾也鲁、柳钦火. 一种对遥感数据进行观测质量分级的方法. ZL 2015 1 0251635.3（授权专利）",
+      "《遥感云计算与科学分析》，科学出版社，2020，参编",
+      "《遥感监测绿皮书（2016）》，社会科学文献出版社，2017，参编",
+      "《全球生态环境遥感监测 2014 年度报告》，科学出版社，2015，参编"
+    ],
+    "en": [
+      "Li J., Zeng Y., Liu Q. Method for grading observation quality of remote sensing data. ZL 2015 1 0251635.3.",
+      "Remote Sensing Cloud Computing and Scientific Analysis. Science Press, 2020 (chapter).",
+      "Blue Book of Remote Sensing Monitoring (2016). Social Sciences Academic Press, 2017 (chapter).",
+      "Global Ecological Environment Remote Sensing Report 2014. Science Press, 2015 (chapter)."
+    ]
+  },
+
+  "awards": {
+    "zh": [
+      "国家级高层次青年人才（2022）",
+      "《麻省理工科技评论》亚太区\"35 岁以下科技创新 35 人\"（2022）",
+      "中国农业大学高层次\"杰出人才\"计划（2021）",
+      "第三届\"李小文遥感科学青年奖\"（2021）",
+      "Remote Sensing of Environment 优秀审稿人（2020）"
+    ],
+    "en": [
+      "National High-level Young Talent Program (2022)",
+      "MIT Technology Review Innovators Under 35 — Asia Pacific (2022)",
+      "Distinguished Professor Program, CAU (2021)",
+      "3rd Li Xiawen Remote Sensing Young Scientist Award (2021)",
+      "Outstanding Reviewer, Remote Sensing of Environment (2020)"
+    ]
+  },
+
+  "news": {
+    "zh": [
+      {"date": "2025-09", "text": "欢迎 2025 级新同学加入课题组。"},
+      {"date": "2024-12", "text": "课题组在 Remote Sensing of Environment 发表新论文。"}
+    ],
+    "en": [
+      {"date": "2025-09", "text": "Warm welcome to new students joining in Fall 2025."},
+      {"date": "2024-12", "text": "New paper published in Remote Sensing of Environment."}
+    ]
+  },
+
+  "join": {
+    "zh": "课题组常年招收对植被遥感、辐射传输建模、遥感大数据感兴趣的博士研究生、硕士研究生与博士后。欢迎具有遥感、地理信息、生态、植物学、计算机、数学等背景的同学报考。有意者请将个人简历、成绩单与代表作发送至 PI 邮箱，邮件标题注明\"应聘/报考 + 姓名 + 学位阶段\"。",
+    "en": "The group welcomes prospective Ph.D. students, master students and postdocs interested in vegetation remote sensing, radiative transfer modeling, and remote sensing big data. Candidates with backgrounds in remote sensing, GIS, ecology, plant science, CS, or mathematics are encouraged to apply. Please send CV, transcripts and representative publication to PI email with subject \"Application + Name + Degree Level\"."
+  }
+}
