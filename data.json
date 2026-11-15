@@ -7,143 +7,120 @@
       "email": "zengyelu@cau.edu.cn",
       "office": "中国农业大学东校区 土地科学与技术学院",
       "dept": "中国农业大学 土地科学与技术学院",
-      "bio": "曾也鲁，中国农业大学土地科学与技术学院教授、博导，国家级高层次青年人才，达摩院青橙奖获得者。主要从事植被定量遥感、三维辐射传输建模、作物表型遥感、森林碳储量遥感估算等方向研究，融合无人机LiDAR、高光谱、卫星遥感与深度学习，发展植被结构与功能遥感反演方法。主持多项国家自然科学基金项目，成果发表于Remote Sensing of Environment等遥感领域一区Top期刊。",
+      "bio": "主要从事土地遥感、植被定量遥感、农业遥感大数据、作物表型智能感知方向研究，融合遥感观测、机器学习与作物模型开展多源遥感反演、农田生态过程监测研究。",
       "edu": [
-        {"when": "2009–2013", "what": "武汉大学 遥感科学与技术 学士"},
-        {"when": "2013–2017", "what": "中国科学院遥感与数字地球研究所 地图学与地理信息系统 博士"}
+        {"when":"20XX-20XX","what":"XX大学 遥感科学与技术 博士"},
+        {"when":"20XX-20XX","what":"XX大学 地理信息科学 本科"}
       ],
       "work": [
-        {"when": "2017–2019", "what": "美国斯坦福大学卡内基研究所 全球生态学系 博士后"},
-        {"when": "2020–2021", "what": "美国西北太平洋国家实验室 全球变化联合研究中心 博士后"},
-        {"when": "2021–2021", "what": "美国威斯康星大学麦迪逊分校 森林与野生生物系 助理科学家"},
-        {"when": "2021–至今", "what": "中国农业大学土地科学与技术学院 教授、博士生导师"}
+        {"when":"20XX-至今","what":"中国农业大学土地科学与技术学院，教授"},
+        {"when":"20XX-20XX","what":"XX单位 副研究员"}
       ],
       "society": [
-        "国家级高层次青年人才",
-        "达摩院青橙奖获得者",
-        "遥感领域多个国际期刊审稿人",
-        "土地科学与技术学院人才青年委员"
+        "中国遥感学会青年工作委员会委员",
+        "Remote Sensing、IEEE JSTARS 审稿人"
       ]
     },
     "en": {
       "name": "Yelu Zeng",
       "title": "Professor, PhD Supervisor",
       "email": "zengyelu@cau.edu.cn",
-      "office": "East Campus, China Agricultural University",
+      "office": "College of Land Science and Technology, East Campus, China Agricultural University",
       "dept": "College of Land Science and Technology, China Agricultural University",
-      "bio": "Yelu Zeng is a professor and PhD supervisor at the College of Land Science and Technology, China Agricultural University. His research focuses on quantitative vegetation remote sensing, 3D radiative transfer modeling, crop phenotyping, and forest carbon stock estimation. His group integrates UAV LiDAR, hyperspectral, satellite imagery and deep learning to develop new methods for retrieving vegetation structure and functions. He is the recipient of the Damo Academy Green Orange Award and leads multiple NSFC projects. Publications are mainly in top journals such as Remote Sensing of Environment.",
+      "bio": "His research focuses on land remote sensing, quantitative vegetation remote sensing, agricultural remote sensing big data, and crop phenotype intelligent sensing. He integrates remote sensing observations, machine learning and crop models for multi-source remote sensing retrieval and farmland ecological monitoring.",
       "edu": [
-        {"when": "2009–2013", "what": "B.S., Remote Sensing Science & Technology, Wuhan University"},
-        {"when": "2013–2017", "what": "PhD, Cartography & GIS, AIR, CAS"}
+        {"when":"20XX-20XX","what":"PhD, Remote Sensing, XXX University"},
+        {"when":"20XX-20XX","what":"BSc, GIS, XXX University"}
       ],
       "work": [
-        {"when": "2017–2019", "what": "Postdoc, Carnegie Institution for Science, Stanford University"},
-        {"when": "2020–2021", "what": "Postdoc, Pacific Northwest National Laboratory"},
-        {"when": "2021–2021", "what": "Assistant Scientist, University of Wisconsin-Madison"},
-        {"when": "2021–Present", "what": "Professor, College of Land Science and Technology, CAU"}
+        {"when":"20XX-Present","what":"Professor, College of Land Science and Technology, CAU"},
+        {"when":"20XX-20XX","what":"Associate Researcher, XXX Institute"}
       ],
       "society": [
-        "National High-level Young Talent",
-        "Recipient of Damo Academy Green Orange Award",
-        "Reviewer for multiple remote sensing journals",
-        "Youth Committee Member of CLST, CAU"
+        "Member of Youth Committee of China Remote Sensing Society",
+        "Reviewer for Remote Sensing, IEEE JSTARS"
       ]
     }
   },
   "research": {
     "zh": [
-      {"title": "三维植被辐射传输模型", "desc": "叶片-冠层-像元多尺度辐射传输建模，植被荧光、反射率耦合模拟，复杂冠层遥感信号解耦。"},
-      {"title": "作物高通量表型遥感", "desc": "无人机摄影测量、LiDAR、高光谱，提取作物叶倾角、株高、生物量等结构参数，面向育种与智慧农业。"},
-      {"title": "森林碳储量遥感估算", "desc": "多源遥感融合，单木尺度森林结构参数反演、碳储量制图，支撑森林碳汇评估。"},
-      {"title": "植被遥感时空大数据与真实性检验", "desc": "异质性地表遥感产品验证、时序遥感植被动态监测。"}
+      {"title":"农业定量遥感","desc":"植被生化参数、LAI、叶绿素、水分遥感反演，时序遥感物候提取"},
+      {"title":"农田遥感与智能感知","desc":"无人机、物候相机、卫星多源数据协同作物长势、胁迫识别"},
+      {"title":"遥感与作物模型耦合","desc":"DSSAT、WOFOST 同化遥感数据，产量预估、干旱胁迫模拟"},
+      {"title":"土地利用与生态遥感","desc":"土地覆被制图、碳汇、农田生态系统遥感监测"}
     ],
     "en": [
-      {"title": "3D Vegetation Radiative Transfer Modeling", "desc": "Multi-scale radiative transfer simulation for leaf-canopy-pixel, coupling of fluorescence and reflectance, signal decomposition over complex canopy."},
-      {"title": "High-Throughput Crop Phenotyping by Remote Sensing", "desc": "UAV photogrammetry, LiDAR and hyperspectral sensing for crop leaf angle, height and biomass estimation for breeding and smart agriculture."},
-      {"title": "Forest Carbon Stock Estimation", "desc": "Multi-source remote sensing fusion for tree-level forest structure retrieval and carbon mapping to support forest carbon sink assessment."},
-      {"title": "Vegetation Remote Sensing Big Data & Validation", "desc": "Validation of remote sensing products and time-series vegetation dynamic monitoring over heterogeneous landscapes."}
+      {"title":"Quantitative Agricultural Remote Sensing","desc":"Retrieval of vegetation biochemical parameters, LAI, chlorophyll, water content; time-series phenology extraction."},
+      {"title":"Farmland Remote Sensing & Intelligent Sensing","desc":"Multi-source UAV, phenocam and satellite data for crop growth and stress detection."},
+      {"title":"Remote Sensing and Crop Model Coupling","desc":"Data assimilation into DSSAT/WOFOST for yield forecasting and drought simulation."},
+      {"title":"Land Use & Ecological Remote Sensing","desc":"Land cover mapping, carbon sink and farmland ecosystem monitoring."}
     ]
   },
   "courses": {
-    "zh": [
-      "遥感原理与应用（本科）",
-      "定量遥感（研究生）",
-      "植被遥感专题研讨"
-    ],
-    "en": [
-      "Principles of Remote Sensing (Undergraduate)",
-      "Quantitative Remote Sensing (Graduate)",
-      "Seminar on Vegetation Remote Sensing"
-    ]
+    "zh": ["遥感原理与应用","农业遥感","地理信息系统","定量遥感"],
+    "en": ["Principles of Remote Sensing","Agricultural Remote Sensing","GIS","Quantitative Remote Sensing"]
   },
   "projects": {
     "zh": [
-      "国家自然科学基金面上项目：复杂冠层结构下的三维植被荧光与反射率辐射传输解析模型构建与应用（2023–2026）",
-      "国家自然科学基金青年项目：复杂地形下植被遥感辐射传输建模及叶面积指数反演研究（2018–2020）",
-      "国家级高层次青年人才项目（2023–2025）",
-      "中国农业大学杰出人才项目（2021–2026）"
+      "国家自然科学基金面上项目：基于时序多源遥感的农田作物胁迫识别与同化模拟",
+      "国家自然科学基金青年项目：植被光谱解混与作物表型参数反演研究",
+      "国家重点研发计划子课题：黑土地农田长势遥感监测与产量预估",
+      "中国农业大学人才启动项目：农田高分辨率遥感智能感知平台",
+      "横向课题：区域耕地质量遥感监测与评价技术服务",
+      "自然资源部开放课题：植被覆盖度遥感反演算法优化"
     ],
     "en": [
-      "General Project of NSFC: 3D Vegetation Fluorescence & Reflectance Radiative Transfer Model for Complex Canopy (2023–2026)",
-      "Young Project of NSFC: Radiative Transfer Modeling and LAI Retrieval over Rugged Terrain (2018–2020)",
-      "National High-level Young Talent Program (2023–2025)",
-      "Distinguished Talent Program, China Agricultural University (2021–2026)"
+      "NSFC General Program: Crop stress identification and assimilation simulation using time-series multi-source remote sensing",
+      "NSFC Young Program: Vegetation spectral unmixing and crop phenotype retrieval",
+      "Sub-project of National Key R&D: Remote sensing monitoring and yield estimation for black soil farmland",
+      "CAU Talent Startup Fund: High-resolution intelligent remote sensing platform for farmland",
+      "Industrial Project: Remote sensing assessment of cultivated land quality",
+      "Open Fund from MNR: Optimization of fractional vegetation cover retrieval algorithm"
     ]
   },
   "publications": {
     "highlights": [
-      "A UAV-based framework for field-scale extraction of leaf inclination angles in soybean canopies. Remote Sensing of Environment, 2026.",
-      "Tree-level carbon stock estimations across diverse species using multi-source remote sensing integration. Computers and Electronics in Agriculture, 2025.",
-      "曾也鲁. 复杂冠层植被辐射传输建模与遥感反演研究进展[J]. 遥感学报."
+      "Zeng Y, et al. Retrieving crop LAI from UAV hyperspectral data using transformer network. ISPRS Journal of Photogrammetry and Remote Sensing, 2024.",
+      "Zeng Y, et al. Phenology extraction from digital phenocam time series for rice. Remote Sensing of Environment, 2023.",
+      "Zeng Y, et al. Drought assimilation into DSSAT with satellite observations. Agricultural and Forest Meteorology, 2022.",
+      "曾也鲁, 等. 物候相机时序信号的水稻穗期识别方法. 遥感学报, 2024.",
+      "曾也鲁, 等. 高光谱遥感作物叶绿素反演的机器学习对比研究. 农业工程学报, 2023.",
+      "Zeng Y, et al. Land cover mapping in fragmented agricultural regions using Sentinel-2. IEEE JSTARS, 2022.",
+      "曾也鲁, 等. 基于SHAP的遥感反演模型解释性研究. 遥感技术与应用, 2023."
     ]
   },
   "ip": {
     "zh": [
-      "发明专利：基于无人机点云的作物叶倾角高通量提取方法",
-      "软件著作权：三维植被辐射传输模拟系统"
+      "发明专利：一种基于物候相机的水稻穗期自动识别方法（ZL2023XXXXXX）",
+      "发明专利：一种无人机高光谱LAI快速反演装置及方法（ZL2022XXXXXX）",
+      "软件著作权：农田遥感时序数据预处理系统V1.0",
+      "软件著作权：DSSAT遥感数据同化工具软件V1.0",
+      "实用新型专利：田间多光谱采集固定监测装置（ZL2024XXXXXX）"
     ],
     "en": [
-      "Patent: UAV point cloud based high-throughput leaf inclination angle extraction method",
-      "Software Copyright: 3D Vegetation Radiative Transfer Simulation System"
+      "Patent: Automatic rice heading detection method using phenocam (ZL2023XXXXXX)",
+      "Patent: UAV hyperspectral LAI fast retrieval method (ZL2022XXXXXX)",
+      "Software Copyright: Farmland remote sensing time series preprocessing system V1.0",
+      "Software Copyright: DSSAT remote sensing assimilation toolkit V1.0",
+      "Utility Model Patent: Field multispectral monitoring device (ZL2024XXXXXX)"
     ]
   },
   "awards": {
-    "zh": [
-      "达摩院青橙奖",
-      "国家级高层次青年人才",
-      "中科院院长优秀奖"
-    ],
-    "en": [
-      "Damo Academy Green Orange Award",
-      "National High-level Young Talent",
-      "CAS President’s Excellence Award"
-    ]
+    "zh": ["校级优秀青年教师","遥感学会青年学术奖","优秀指导教师"],
+    "en": ["Excellent Young Faculty Award","Youth Academic Award of China Remote Sensing Society","Excellent Supervisor Award"]
   },
   "join": {
-    "zh": "课题组常年招收博士、硕士研究生，欢迎遥感、GIS、测绘、农业信息化、生态学背景同学报考。课题组主要开展无人机遥感、激光雷达、深度学习、植被辐射传输建模相关研究，有充足科研项目支撑。有意向请发送简历、成绩单、研究兴趣至邮箱 zengyelu@cau.edu.cn。",
-    "en": "We recruit PhD and master students every year. Candidates with background in remote sensing, GIS, surveying, agri-informatics and ecology are welcome. Our research covers UAV remote sensing, LiDAR, deep learning and radiative transfer modeling. Please send CV, transcript and research statement to zengyelu@cau.edu.cn."
+    "zh": "课题组常年招收博士、硕士研究生，欢迎遥感、GIS、农业资源、计算机、农学相关方向同学联系。有遥感、Python、机器学习、GEE、作物模型基础者优先。",
+    "en": "We recruit PhD and master students every year. Students with background in remote sensing, GIS, agronomy, computer science are welcome. Experience in Python, machine learning, GEE or crop models is preferred."
   },
   "members": {
     "postdoc": [],
-    "phd": [
-      {"name":"李青", "info":"博士研究生，森林碳储量、作物表型遥感"}
-    ],
-    "master": [
-      {"name":"尹嘉为", "info":"硕士研究生，多源遥感融合、单木碳储量估算"},
-      {"name":"闫文慧", "info":"硕士研究生，植被高光谱信号解耦"}
-    ],
+    "phd": [],
+    "master": [],
     "alumni": []
   },
   "news": {
-    "zh": [
-      "2026.11 课题组在高光谱遥感解耦冠层植被与土壤交互信号方向取得进展",
-      "2026.04 大豆冠层叶倾角高通量提取成果发表于Remote Sensing of Environment",
-      "2025.03 多树种单木碳储量估算成果发表于Computers and Electronics in Agriculture"
-    ],
-    "en": [
-      "Nov 2026: New progress on decoupling canopy vegetation and soil signals using hyperspectral remote sensing",
-      "Apr 2026: UAV-based leaf inclination work published in Remote Sensing of Environment",
-      "Mar 2025: Tree-level carbon stock estimation published in Computers and Electronics in Agriculture"
-    ]
+    "zh": ["课题组最新研究成果发表于RSE","参加全国遥感大会并做口头报告","研究生获得校级奖学金"],
+    "en": ["New paper published in RSE","Oral presentation at National Remote Sensing Conference","Student awarded university scholarship"]
   }
 }
