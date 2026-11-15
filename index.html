@@ -76,79 +76,76 @@ body{
 .tab-content.active{
     display:block;
 }
+/* ========== 纵向个人卡片样式（和截图对齐） ========== */
 .profile-wrap {
     display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
+    gap: 36px;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 .profile-img-card {
-    width: 220px;
-    height: 290px;
-    border-radius: 4px;
-    border:1px solid #ddd;
-    overflow: hidden;
+    width: 260px;
+    height: auto;
     flex-shrink: 0;
 }
 .profile-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
     display: block;
 }
 .profile-text {
-    flex: 1;
-    min-width: 280px;
+    padding-top: 8px;
 }
 .profile-name {
-    font-size: 34px;
+    font-size: 48px;
     font-weight: 700;
     color:#222;
-    margin:0 0 6px 0;
+    margin:0 0 8px 0;
 }
 .profile-title {
-    font-size:17px;
+    font-size:20px;
     color:#444;
-    margin-bottom:16px;
+    margin-bottom:24px;
 }
-.profile-info-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px 16px;
-    font-size:15px;
+.profile-info-item{
+    font-size:19px;
+    margin-bottom:14px;
+}
+.profile-info-item b{
+    color:#222;
 }
 .section h2{
     font-size:22px;
     color:#222;
-    margin:24px 0 16px;
+    margin:32px 0 16px;
     padding-bottom:6px;
     border-bottom:2px solid #900;
     display:inline-block;
 }
-ul{padding-left:22px;}
-li{margin-bottom:10px;font-size:15.5px;}
-.research-item{margin-bottom:16px;}
-.research-item strong{color:#900;font-size:16px;}
-.paper-item{margin-bottom:12px;font-size:15px;}
+ul{padding-left:24px;}
+li{margin-bottom:12px;font-size:16px;line-height:1.7;}
+.research-item{margin-bottom:20px;}
+.research-item strong{color:#900;font-size:17px;}
+.paper-item{margin-bottom:14px;font-size:16px;}
 .member-block{
     display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:24px;
     margin-top:12px;
 }
 .member-card{
-    padding:12px;border:1px solid #eee;border-radius:4px;
+    padding:14px;border:1px solid #eee;border-radius:4px;
 }
-.member-card h4{color:#900;margin-bottom:4px;}
+.member-card h4{color:#900;margin-bottom:6px;font-size:17px;}
 .placeholder-text{
     color:#777;
-    font-size:15px;
+    font-size:16px;
 }
 @media (max-width:768px) {
     .wrap{flex-direction:column;}
     .sidebar{width:100%;border-right:none;border-bottom:1px solid #eee;}
-    .profile-wrap{flex-direction:column;}
-    .profile-img-card{max-width:240px;height:300px;}
+    .profile-wrap{flex-direction:column;gap:20px;}
+    .profile-img-card{width:240px;}
+    .profile-name{font-size:36px;}
 }
 </style>
 </head>
@@ -245,7 +242,7 @@ function render(){
     const keys = ["info","research","course","project","paper","tech","award","admission","team","news"];
     keys.forEach((k,i)=> btns[i].textContent = menuText[k]);
 
-    // 个人资料（合并：头像+简介+教育+工作+学术兼职）
+    // 纵向个人资料卡片（和截图样式对齐）
     let infoHtml = `
         <div class="profile-wrap">
             <div class="profile-img-card">
@@ -255,16 +252,14 @@ function render(){
             <div class="profile-text">
                 <h1 class="profile-name">${pi.name}</h1>
                 <div class="profile-title">${pi.title}</div>
-                <div class="profile-info-grid">
-                    <div><b>Email：</b>${pi.email}</div>
-                    <div><b>${lang==='zh'?'办公室':'Office'}：</b>${pi.office}</div>
-                    <div><b>${lang==='zh'?'单位':'Affiliation'}：</b>${pi.dept}</div>
-                </div>
+                <div class="profile-info-item"><b>Email：</b>${pi.email}</div>
+                <div class="profile-info-item"><b>单位：</b>${pi.dept}</div>
+                <div class="profile-info-item"><b>办公室：</b>${pi.office}</div>
             </div>
         </div>
         <div class="section">
             <h2>${lang==="zh"?"简介":"Biography"}</h2>
-            <div style="font-size:15.5px;line-height:1.8;">${pi.bio}</div>
+            <div style="font-size:16px;line-height:1.8;">${pi.bio}</div>
         </div>
         <div class="section">
             <h2>${lang==="zh"?"教育经历":"Education"}</h2>
@@ -306,7 +301,7 @@ function render(){
     paperHtml += `</ul></div>`;
     document.getElementById("tab-paper").innerHTML = paperHtml;
 
-    //科技成果
+    //科技成果（专利软著）
     let techHtml = `<div class="section"><h2>${menuText.tech}</h2><ul>`;
     data.ip[lang].forEach(i=>techHtml += `<li>${i}</li>`);
     techHtml += `</ul></div>`;
@@ -319,7 +314,7 @@ function render(){
     document.getElementById("tab-award").innerHTML = awardHtml;
 
     //招生信息
-    let admHtml = `<div class="section"><h2>${menuText.admission}</h2><div style="font-size:15.5px;line-height:1.8;">${data.join[lang]}</div></div>`;
+    let admHtml = `<div class="section"><h2>${menuText.admission}</h2><div style="font-size:16px;line-height:1.8;">${data.join[lang]}</div></div>`;
     document.getElementById("tab-admission").innerHTML = admHtml;
 
     //团队展示
@@ -327,22 +322,22 @@ function render(){
     const m = data.members;
     const hasMember = (m.postdoc && m.postdoc.length>0) || (m.phd && m.phd.length>0) || (m.master && m.master.length>0) || (m.alumni && m.alumni.length>0);
     if(m.postdoc && m.postdoc.length>0){
-        teamHtml += `<h3 style="margin:12px 0 8px;color:#333">${lang==="zh"?"博士后":"Postdocs"}</h3><div class="member-block">`;
+        teamHtml += `<h3 style="margin:14px 0 8px;color:#333">${lang==="zh"?"博士后":"Postdocs"}</h3><div class="member-block">`;
         m.postdoc.forEach(x=>teamHtml += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`);
         teamHtml += `</div>`;
     }
     if(m.phd && m.phd.length>0){
-        teamHtml += `<h3 style="margin:12px 0 8px;color:#333">${lang==="zh"?"博士研究生":"PhD Students"}</h3><div class="member-block">`;
+        teamHtml += `<h3 style="margin:14px 0 8px;color:#333">${lang==="zh"?"博士研究生":"PhD Students"}</h3><div class="member-block">`;
         m.phd.forEach(x=>teamHtml += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`);
         teamHtml += `</div>`;
     }
     if(m.master && m.master.length>0){
-        teamHtml += `<h3 style="margin:12px 0 8px;color:#333">${lang==="zh"?"硕士研究生":"Master Students"}</h3><div class="member-block">`;
+        teamHtml += `<h3 style="margin:14px 0 8px;color:#333">${lang==="zh"?"硕士研究生":"Master Students"}</h3><div class="member-block">`;
         m.master.forEach(x=>teamHtml += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`);
         teamHtml += `</div>`;
     }
     if(m.alumni && m.alumni.length>0){
-        teamHtml += `<h3 style="margin:12px 0 8px;color:#333">${lang==="zh"?"毕业生":"Alumni"}</h3><div class="member-block">`;
+        teamHtml += `<h3 style="margin:14px 0 8px;color:#333">${lang==="zh"?"毕业生":"Alumni"}</h3><div class="member-block">`;
         m.alumni.forEach(x=>teamHtml += `<div class="member-card"><h4>${x.name}</h4><div>${x.info}</div></div>`);
         teamHtml += `</div>`;
     }
