@@ -78,25 +78,12 @@
   },
 
   "publications": {
-    "2022": [
+    "highlights": [
       "Zeng, Y., Hao, D., Huete, A., et al. Optical vegetation indices for monitoring terrestrial ecosystems globally. <i>Nature Reviews Earth & Environment</i>, 2022.",
       "Zeng, Y., Chen, M., Hao, D., et al. Combining near-infrared radiance of vegetation and fluorescence spectroscopy to detect abiotic stresses. <i>Remote Sensing of Environment</i>, 270, 112856, 2022.",
-      "Hao, D., Zeng, Y.*, et al. Adjusting solar-induced fluorescence to nadir-viewing provides a better proxy for GPP. <i>ISPRS J. of Photogrammetry and Remote Sensing</i>, 186, 157–169, 2022."
-    ],
-    "2021": [
+      "Hao, D., Zeng, Y.*, et al. Adjusting solar-induced fluorescence to nadir-viewing provides a better proxy for GPP. <i>ISPRS J. of Photogrammetry and Remote Sensing</i>, 186, 157–169, 2022.",
       "Zeng, Y., Hao, D.*, et al. Estimating near-infrared reflectance of vegetation from hyperspectral data. <i>RSE</i>, 267, 112723, 2021.",
-      "Hao, D., Zeng, Y.*, et al. Practical approaches for normalizing directional SIF to a standard viewing geometry. <i>RSE</i>, 255, 112171, 2021.",
-      "Hao, D., Asrar, G.R., Zeng, Y., et al. Potential of hotspot SIF for better tracking terrestrial photosynthesis. <i>Global Change Biology</i>, 27(10), 2144–2158, 2021."
-    ],
-    "2020": [
-      "Zeng, Y., Badgley, G., et al. A radiative transfer model for solar induced fluorescence using spectral invariants theory. <i>RSE</i>, 240, 111678, 2020.",
-      "Zeng, Y., Li, J., et al. A Radiative Transfer Model for Patchy Landscapes Based on Stochastic RRT. <i>IEEE TGRS</i>, 58(4), 2571–2589, 2020."
-    ],
-    "2019": [
-      "Zeng, Y.#*, Badgley, G.#, et al. A practical approach for estimating the escape ratio of near-infrared SIF. <i>RSE</i>, 232, 111209, 2019."
-    ],
-    "2016": [
-      "Zeng, Y., Li, J.*, Liu, Q.*, et al. A Radiative Transfer Model for Heterogeneous Agro-Forestry Scenarios. <i>IEEE TGRS</i>, 54(8), 4613–4628, 2016."
+      "Zeng, Y., Badgley, G., et al. A radiative transfer model for solar induced fluorescence using spectral invariants theory. <i>RSE</i>, 240, 111678, 2020."
     ]
   },
 
@@ -126,7 +113,7 @@
       "Li J., Zeng Y., Liu Q. Method for grading observation quality of remote sensing data. ZL 2015 1 0251635.3.",
       "Remote Sensing Cloud Computing and Scientific Analysis. Science Press, 2020 (chapter).",
       "Blue Book of Remote Sensing Monitoring (2016). Social Sciences Academic Press, 2017 (chapter).",
-      "Global Ecological Environment Remote Sensing Report 2014. Science Press, 2015 (chapter)."
+      "Global Ecological Environment Remote Sensing Report 2014. Science Press, 2014 (chapter)."
     ]
   },
 
