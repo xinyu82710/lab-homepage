@@ -56,14 +56,14 @@
   },
   "research": {
     "zh": [
-      {"title":"三维植被结构下的荧光/光学辐射传输解析模型（叶片-冠层-像元多尺度与复杂地表）","desc":""},
-      {"title":"基于荧光/光学的植物生理与结构参数反演，及在长势/干旱/霜冻/病虫害监测中的应用","desc":""},
-      {"title":"植被遥感时空大数据分析、异质性地表遥感产品真实性检验、空间采样与代表性评价","desc":""}
+      {"title":"1. 三维植被结构下的荧光/光学辐射传输解析模型（叶片-冠层-像元多尺度与复杂地表）","desc":""},
+      {"title":"2. 基于荧光/光学的植物生理与结构参数反演，及在长势/干旱/霜冻/病虫害监测中的应用","desc":""},
+      {"title":"3. 植被遥感时空大数据分析、异质性地表遥感产品真实性检验、空间采样与代表性评价","desc":""}
     ],
     "en": [
-      {"title":"Analytical fluorescence / optical radiative-transfer models for 3-D vegetation (leaf-canopy-pixel multi-scale and complex land surfaces)","desc":""},
-      {"title":"Retrieval of vegetation physiological and structural parameters from fluorescence & optical observations, and its application in growth, drought, frost and pest monitoring","desc":""},
-      {"title":"Vegetation remote-sensing big-data, product validation for heterogeneous surfaces, spatial sampling and representativeness evaluation","desc":""}
+      {"title":"1. Analytical fluorescence / optical radiative-transfer models for 3-D vegetation (leaf-canopy-pixel multi-scale and complex land surfaces)","desc":""},
+      {"title":"2. Retrieval of vegetation physiological and structural parameters from fluorescence & optical observations, and its application in growth, drought, frost and pest monitoring","desc":""},
+      {"title":"3. Vegetation remote-sensing big-data, product validation for heterogeneous surfaces, spatial sampling and representativeness evaluation","desc":""}
     ]
   },
   "courses": {
