@@ -120,7 +120,7 @@ body{
 .section h2{
     font-size:22px;
     color:#222;
-    margin-bottom:16px;
+    margin:24px 0 16px;
     padding-bottom:6px;
     border-bottom:2px solid #900;
     display:inline-block;
@@ -157,7 +157,6 @@ li{margin-bottom:10px;font-size:15.5px;}
 <div class="wrap">
     <div class="sidebar">
         <button class="sidebar-item active" data-tab="info">个人资料</button>
-        <button class="sidebar-item" data-tab="overview">个人概况</button>
         <button class="sidebar-item" data-tab="research">研究领域</button>
         <button class="sidebar-item" data-tab="course">开授课程</button>
         <button class="sidebar-item" data-tab="project">科研项目</button>
@@ -174,7 +173,6 @@ li{margin-bottom:10px;font-size:15.5px;}
             <button id="btnEn">English</button>
         </div>
         <div id="tab-info" class="tab-content active"></div>
-        <div id="tab-overview" class="tab-content"></div>
         <div id="tab-research" class="tab-content"></div>
         <div id="tab-course" class="tab-content"></div>
         <div id="tab-project" class="tab-content"></div>
@@ -233,7 +231,6 @@ function render(){
     const lang = currentLang;
     const menuText = {
         info: lang==="zh"?"个人资料":"Profile",
-        overview: lang==="zh"?"个人概况":"Biography",
         research: lang==="zh"?"研究领域":"Research Interests",
         course: lang==="zh"?"开授课程":"Courses",
         project: lang==="zh"?"科研项目":"Research Projects",
@@ -245,11 +242,11 @@ function render(){
         news: lang==="zh"?"活动动态":"News"
     };
     const btns = document.querySelectorAll(".sidebar-item");
-    const keys = ["info","overview","research","course","project","paper","tech","award","admission","team","news"];
+    const keys = ["info","research","course","project","paper","tech","award","admission","team","news"];
     keys.forEach((k,i)=> btns[i].textContent = menuText[k]);
 
-    // 个人资料
-    document.getElementById("tab-info").innerHTML = `
+    // 个人资料（合并：头像+简介+教育+工作+学术兼职）
+    let infoHtml = `
         <div class="profile-wrap">
             <div class="profile-img-card">
                 <img class="profile-img" src="${data.pi.photo}" alt="${pi.name}"
@@ -265,20 +262,25 @@ function render(){
                 </div>
             </div>
         </div>
+        <div class="section">
+            <h2>${lang==="zh"?"简介":"Biography"}</h2>
+            <div style="font-size:15.5px;line-height:1.8;">${pi.bio}</div>
+        </div>
+        <div class="section">
+            <h2>${lang==="zh"?"教育经历":"Education"}</h2>
+            <ul>
     `;
+    pi.edu.forEach(item=>infoHtml += `<li>${item.when} ${item.what}</li>`);
+    infoHtml += `</ul></div>`;
 
-    //个人概况
-    let overviewHtml = `<div class="section"><h2>${menuText.overview}</h2><div style="font-size:15.5px;line-height:1.8;">${pi.bio}</div></div>`;
-    overviewHtml += `<div class="section"><h2>${lang==="zh"?"教育经历":"Education"}</h2><ul>`;
-    pi.edu.forEach(item=>overviewHtml += `<li>${item.when} ${item.what}</li>`);
-    overviewHtml += `</ul></div>`;
-    overviewHtml += `<div class="section"><h2>${lang==="zh"?"工作经历":"Work Experience"}</h2><ul>`;
-    pi.work.forEach(item=>overviewHtml += `<li>${item.when} ${item.what}</li>`);
-    overviewHtml += `</ul></div>`;
-    overviewHtml += `<div class="section"><h2>${lang==="zh"?"学术兼职":"Academic Services"}</h2><ul>`;
-    pi.society.forEach(item=>overviewHtml += `<li>${item}</li>`);
-    overviewHtml += `</ul></div>`;
-    document.getElementById("tab-overview").innerHTML = overviewHtml;
+    infoHtml += `<div class="section"><h2>${lang==="zh"?"工作经历":"Work Experience"}</h2><ul>`;
+    pi.work.forEach(item=>infoHtml += `<li>${item.when} ${item.what}</li>`);
+    infoHtml += `</ul></div>`;
+
+    infoHtml += `<div class="section"><h2>${lang==="zh"?"学术兼职":"Academic Services"}</h2><ul>`;
+    pi.society.forEach(item=>infoHtml += `<li>${item}</li>`);
+    infoHtml += `</ul></div>`;
+    document.getElementById("tab-info").innerHTML = infoHtml;
 
     //研究领域
     let resHtml = `<div class="section"><h2>${menuText.research}</h2>`;
